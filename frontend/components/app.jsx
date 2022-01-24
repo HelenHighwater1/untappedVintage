@@ -15,16 +15,16 @@ import LogInFormContainer from './session/login_form_container';
 
 const App = () => (
     <div> 
-        <h1>Welcome to the UntappedVintage App!</h1>
+        <header>
+            <h1>Welcome to the UntappedVintage App!</h1>
+            <h3> add navbar here </h3>
+        </header>
         
-        <Switch>
-        
-            <Route exact path="/login" component={LogInFormContainer} />
-            <Route path="/" component={SignUpFormContainer} /> 
-
-        </Switch>
+        <Route exact path="/login" component={LogInFormContainer} />
+        <Route path="/" component={SignUpFormContainer} /> 
 
     </div>
 );
 
 export default App;
+    

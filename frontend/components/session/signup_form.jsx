@@ -16,13 +16,14 @@ class SignupForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        this.props.action(this.state)
+        console.log("sa=", this.props.submitAction)
+        this.props.submitAction(this.state)
     }
 
 
     render(){
         return(
-            <form onSubmit={this.handleSubmit}>
+            <form className='session-form' onSubmit={this.handleSubmit}>
                 <label> Username
                     <input 
                         type="text"
@@ -37,8 +38,14 @@ class SignupForm extends React.Component {
                         onChange={this.update('password')}
                     />
                 </label>
-                {/* how to handle additional fields for sign up */}
-                <button type='submit' value={this.props.formType} />
+                <label>First name
+                    <input
+                        type='text'
+                        value={this.firstname}
+                        onChange={this.update('firstname')}
+                    />
+                </label>
+                <button type='submit'>Sign up!</button>            
             </form>
         )
     }

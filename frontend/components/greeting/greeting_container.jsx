@@ -1,14 +1,15 @@
 import { connect } from 'react-redux';
-import SignupForm from './signup_form';
+import Greeting from './Greeting';
 import { signup } from '../../actions/session_actions'
+import { login } from '../../actions/session_actions'
+//do I need to know if theres a current user here? 
 
-const mSTP = errors => ({
-    errors: errors.session,
-    formType: "Sign Up"
+const mSTP = () => ({
+   
 })
 
 const mDTP = dispatch => ({
-    submitAction: user => dispatch(signup(user))
+    
 })
 
 export default connect(mSTP, mDTP)(SignupForm)

@@ -16,15 +16,16 @@ class LoginForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        this.props.action(this.state)
+        this.props.submitAction(this.state)
     }
 
 
     render(){
         return(
-            <form onSubmit={this.handleSubmit}>
+            <form className='session-form' onSubmit={this.handleSubmit}>
                 <label> Username
                     <input 
+                        
                         type="text"
                         value={this.state.username}
                         onChange={this.update('username')}
@@ -37,8 +38,8 @@ class LoginForm extends React.Component {
                         onChange={this.update('password')}
                     />
                 </label>
-                {/* how to handle additional fields for sign up */}
-                <button type='submit' value={this.props.formType} />
+
+                <button type='submit'>Log in!</button>
             </form>
         )
     }
