@@ -5,7 +5,9 @@ import LoginForm from './login_form';
 
 const mSTP = errors  => ({
     errors: errors.session,
-    formType: "Log in"
+    formType: "Log in",
+    // navLink: <Link to="/signup">Sign up instead?</Link>
+
 })
 
 const mDTP = dispatch => ({

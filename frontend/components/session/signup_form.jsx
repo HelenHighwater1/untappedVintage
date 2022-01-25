@@ -16,13 +16,13 @@ class SignupForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        console.log("sa=", this.props.submitAction)
         this.props.submitAction(this.state)
     }
 
 
     render(){
         return(
+            <div className='session-modal'>
             <form className='session-form' onSubmit={this.handleSubmit}>
                 <label> Username
                     <input 
@@ -38,15 +38,37 @@ class SignupForm extends React.Component {
                         onChange={this.update('password')}
                     />
                 </label>
+                <label>Email
+                    <input
+                        type='text'
+                        value={this.email}
+                        onChange={this.update('email')}
+                    />
+                </label>
                 <label>First name
                     <input
                         type='text'
-                        value={this.firstname}
-                        onChange={this.update('firstname')}
+                        value={this.first_name}
+                        onChange={this.update('first_name')}
+                    />
+                </label>
+                <label>Last name
+                    <input
+                        type='text'
+                        value={this.last_name}
+                        onChange={this.update('last_name')}
+                    />
+                </label>
+                <label>Country
+                    <input
+                        type='text'
+                        value={this.country}
+                        onChange={this.update('country')}
                     />
                 </label>
                 <button type='submit'>Sign up!</button>            
             </form>
+            </div>
         )
     }
 }

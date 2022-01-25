@@ -12,16 +12,16 @@ import {
 
 import SignUpFormContainer from './session/signup_form_container';
 import LogInFormContainer from './session/login_form_container';
-
+import HeroContainer from './hero/hero_container'
 const App = () => (
     <div> 
-        <header>
+        {/* <header>
             <h1>Welcome to the UntappedVintage App!</h1>
             <h3> add navbar here </h3>
-        </header>
-        
+        </header> */}
+        <Route exact path="/signup" component={SignUpFormContainer} />
         <Route exact path="/login" component={LogInFormContainer} />
-        <Route path="/" component={SignUpFormContainer} /> 
+        <Route path="/" component={HeroContainer} /> 
 
     </div>
 );

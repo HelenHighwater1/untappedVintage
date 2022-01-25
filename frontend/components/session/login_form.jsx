@@ -22,6 +22,7 @@ class LoginForm extends React.Component {
 
     render(){
         return(
+            <div className="session-modal">
             <form className='session-form' onSubmit={this.handleSubmit}>
                 <label> Username
                     <input 
@@ -41,6 +42,7 @@ class LoginForm extends React.Component {
 
                 <button type='submit'>Log in!</button>
             </form>
+            </div>
         )
     }
 }
