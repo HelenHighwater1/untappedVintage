@@ -3,15 +3,16 @@ import {
     RECEIVE_CURRENT_USER,
 } from '../actions/session_actions';
 
-const SessionErrorsReducer = (state = [], action) => {
-    Object.freeze(state);
+const SessionErrorsReducer = (preloadedState = [], action) => {
+    Object.freeze(preloadedState);
     switch (action.type) {
         case RECEIVE_SESSION_ERRORS:
+            console.log(action)
             return action.errors;
         case RECEIVE_CURRENT_USER:
             return [];
         default:
-            return state;
+            return preloadedState;
     }
 };
 
