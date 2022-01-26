@@ -8,15 +8,19 @@ class Navbar extends React.Component {
 
     }
 
+    logoutUser = () => {
+        
+    }
+
     render() {
         return (
             <div className="header-list">
                 <ul>
                     <li>My Profile</li>
                     <li>My Reviews</li>
-                    <li onClick={props.logout()}>Log Out</li>
+                    <li onClick={this.props.logout}>Log Out</li>
                 </ul>
-            </div>
+             </div>
         )
     }
 
