@@ -6,7 +6,7 @@ const SessionReducer = (preloadedState = _nullSession, action) => {
     Object.freeze(preloadedState);
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            return Object.assign({}, {currentUser: action.user})
+            return { id: action.currentUser.id };
         case LOGOUT_CURRENT_USER: 
             return _nullSession;
         default:

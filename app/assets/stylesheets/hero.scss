@@ -1,0 +1,44 @@
+.hero {
+	min-height: 700px;
+	width: 100%;
+	height: auto;
+	background-image: url("https://i2.wp.com/www.firestonebeer.com/wp-content/uploads/2021/02/AD4I0267.jpg?w=2360&quality=85&strip=color&ssl=1");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+.hero :link {
+	font: white;
+	position: flex;
+	float: right;
+	padding: 10px;
+	margin: 10px;
+	background-color: rgba(245, 245, 245, 0.349);
+	border: 1px solid rgb(248, 247, 247);
+	border-radius: 5px;
+	
+}
+
+#text-link {
+    color: white;
+    text-decoration: inherit;
+}
+
+.hero a:hover{
+	color: black;
+	background-color: rgb(218, 190, 35);	
+	
+}
+
+.hero-logo {	
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+
+}
+
+.hero-logo img {
+	width: 100%;
+
+}

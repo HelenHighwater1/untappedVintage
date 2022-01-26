@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class LoginForm extends React.Component {
     constructor(props){
         super(props)
@@ -8,6 +9,7 @@ class LoginForm extends React.Component {
             password: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.loginDemoUser = this.loginDemoUser.bind(this)
     }
 
     update(field) {
@@ -17,7 +19,14 @@ class LoginForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
         const user = Object.assign({}, this.state);
-        this.props.submitAction(this.state)
+        this.props.login(this.state)
+            .then(() => this.props.history.push('/review_index'));
+    }
+
+    loginDemoUser(e) {
+        e.preventDefault();
+        const demoUser = { username: "guest", password: "password" };
+        this.props.login(demoUser)
             .then(() => this.props.history.push('/review_index'));
     }
 
@@ -27,6 +36,7 @@ class LoginForm extends React.Component {
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
+                        {/* <FlashMessage duration={5000}>{error}</FlashMessage> */}
                     </li>
                 ))}
             </ul>
@@ -61,6 +71,7 @@ class LoginForm extends React.Component {
                 </label>
 
                 <button type='submit'>Log in!</button>
+                <button onClick={this.loginDemoUser}>Log in as Demo User</button>
             </form>
             </div>
         )

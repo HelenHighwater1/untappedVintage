@@ -1,0 +1,52 @@
+.nav-hidden *  {
+    visibility: hidden;
+}
+
+.nav-not-hidden  {
+    visibility: visible;
+    position: fixed;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    background-color: orange;
+}
+
+
+.dropdown-menu{
+    position: flex; 
+    float: right;
+    margin-right: 30px;
+}
+
+// .dropdown-content{
+//     display: ;
+// }
+
+.profile-thumbnail{
+    width: 38px; 
+    height: 35px;
+
+}
+.profile-thumbnail:hover{
+    background-color: rgb(202, 90, 46);
+    border-radius: 3px;
+
+}
+
+.dropdown-item {
+    display: none;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    color: rgb(59, 44, 26);
+    
+}
+
+.dropdown-item:hover {
+    display: flex;
+    background-color: rgb(53, 43, 24);
+    color: rgb(243, 233, 233);
+    
+}
