@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 class LoginForm extends React.Component {
@@ -20,14 +21,18 @@ class LoginForm extends React.Component {
         e.preventDefault()
         const user = Object.assign({}, this.state);
         this.props.login(this.state)
-            .then(() => this.props.history.push('/review_index'));
+            .then(() => this.props.history.push('/reviews_index'));
     }
 
     loginDemoUser(e) {
         e.preventDefault();
         const demoUser = { username: "guest", password: "password" };
         this.props.login(demoUser)
-            .then(() => this.props.history.push('/review_index'));
+
+            .then(() => {
+                console.log('Boo')
+                this.props.history.push('/reviews_index')
+            });
     }
 
     renderErrors() {
@@ -50,30 +55,39 @@ class LoginForm extends React.Component {
 
     render(){
         return(
-            <div className="session-modal">
-            <form className='session-form' onSubmit={this.handleSubmit}>
-                {this.renderErrors()}
+            <div className="hero">
+                <nav className="login-signup">
 
-                <label> Username</label>
-                    <input 
+                    <Link to="./login" id="text-link">Login</Link>
+                    <Link to="./signup" id="text-link">Sign up!</Link>
+                </nav>
+                <div className='hero-logo'><img src="/assets/logo.png" alt="untappdVintage" /></div>
+
+                <div className="session-modal">
+                    <form className='session-form' onSubmit={this.handleSubmit}>
+                        {this.renderErrors()}
+
+                        <label> Username</label>
+                            <input 
+                                
+                                type="text"
+                                value={this.state.username}
+                                onChange={this.update('username')}
+                            />
                         
-                        type="text"
-                        value={this.state.username}
-                        onChange={this.update('username')}
-                    />
-                
-                <label>Password</label>
-                    <input 
-                        type='password'
-                        value={this.password}
-                        onChange={this.update('password')}
-                    />
-                <p></p>
+                        <label>Password</label>
+                            <input 
+                                type='password'
+                                value={this.password}
+                                onChange={this.update('password')}
+                            />
+                        <p></p>
 
-                <button type='submit'>Log in!</button>
-                {/* <p> ~ or ~ </p> */}
-                <button onClick={this.loginDemoUser}>Log in as Demo User</button>
-            </form>
+                        <button type='submit'>Log in!</button>
+                     
+                        <button onClick={this.loginDemoUser}>Log in as Demo User</button>
+                    </form>
+                </div>
             </div>
         )
     }

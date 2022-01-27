@@ -15,13 +15,14 @@ class Navbar extends React.Component {
     }
 
     render() {
+        console.log(this.props.currentUser)
         const navStatus = this.props.currentUser ? ("nav-not-hidden") : ("nav-hidden")
         // const dropdownHover = (e) => {
         //      this.setState({ display: 'none' })
         // }
-        console.log(this.state.display)
         return (
             <div className={navStatus}>
+    
                 <div>
 
                 </div>
