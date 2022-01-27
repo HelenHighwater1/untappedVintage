@@ -30,8 +30,8 @@ user1 = User.create!(
 user2 = User.create!(
     username: "Hans_Gruber",
     password: "hans4ever",
-    firstName: "Hans",
-    lastName: "Gruber",
+    first_name: "Hans",
+    last_name: "Gruber",
     country: "Germany",
     email: "Hans4Ever@gmail.de",
     imgUrl: "https://hansGrueber.jpg"
