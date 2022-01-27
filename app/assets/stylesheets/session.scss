@@ -1,13 +1,20 @@
 .session-form {
     display: flex;
     flex-direction: column; 
-    justify-content: space-between;
-    align-items: center;
+    // justify-content: space-between;
+
 }
 
+.session-form label {
+	display: flex;
+	width: 100px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	color: rgb(0, 0, 0);
+
+}
 
 .session-modal {
-	height: 300px;
 	width: 300px;
 	z-index: 1;
 	position: absolute;
@@ -19,8 +26,33 @@
 	padding: 10px;
 
 }
-.session-modal > form {
-	position: flex;
-	align-items: center;
-	justify-content: space-between;
+// .session-modal > form {
+// 	// position: flex;
+// 	// // align-items: center;
+// 	// justify-content: space-between;
+// }
+
+.session-form p {
+	font-size: 10px;
 }
+.session-form button {
+	background: rgb(66, 66, 66);
+	border-color: rgb(141, 115, 36);
+	color: white;
+	margin-top: 5px;
+	padding: 7px;
+	margin-bottom: 10px;
+}
+
+.session-form button:hover {
+	box-shadow: 7px 4px 4px rgba(110, 110, 110, 0.322);
+	color:white;
+}
+
+.session-form button:active{
+	background-color:rgb(218, 190, 35);
+	color: black;
+
+}
+
+// .session-form button

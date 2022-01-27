@@ -5,7 +5,10 @@ class ReviewIndex extends React.Component {
 
     render(){
         return (
-            <h3>Congrats - you are logged in!</h3>
+            <div className="review"> 
+
+                <h3 className="title">REVIEWS</h3>
+            </div>
         )
     }
 }

@@ -54,23 +54,24 @@ class LoginForm extends React.Component {
             <form className='session-form' onSubmit={this.handleSubmit}>
                 {this.renderErrors()}
 
-                <label> Username
+                <label> Username</label>
                     <input 
                         
                         type="text"
                         value={this.state.username}
                         onChange={this.update('username')}
                     />
-                </label>
-                <label>Password
+                
+                <label>Password</label>
                     <input 
                         type='password'
                         value={this.password}
                         onChange={this.update('password')}
                     />
-                </label>
+                <p></p>
 
                 <button type='submit'>Log in!</button>
+                {/* <p> ~ or ~ </p> */}
                 <button onClick={this.loginDemoUser}>Log in as Demo User</button>
             </form>
             </div>

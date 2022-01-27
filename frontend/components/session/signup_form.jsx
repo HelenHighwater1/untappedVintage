@@ -29,8 +29,8 @@ class SignupForm extends React.Component {
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
+                    <li className='errors' key={`error-${i}`}>
+                        {`-${error}`}
                     </li>
                 ))}
             </ul>
@@ -47,48 +47,48 @@ class SignupForm extends React.Component {
             <div className='session-modal'>
             <form className='session-form' onSubmit={this.handleSubmit}>
                 {this.renderErrors()}
-                <label> Username
+                <label> Username  </label>
                     <input 
                         type="text"
                         value={this.state.username}
                         onChange={this.update('username')}
                     />
-                </label>
-                <label>Password
+                
+                <label>Password  </label>
                     <input 
                         type='password'
                         value={this.password}
                         onChange={this.update('password')}
                     />
-                </label>
-                <label>Email
+                
+                <label>Email </label>    
                     <input
                         type='text'
                         value={this.email}
                         onChange={this.update('email')}
                     />
-                </label>
-                <label>First name
+                
+                <label>First name</label>
                     <input
                         type='text'
                         value={this.first_name}
                         onChange={this.update('first_name')}
                     />
-                </label>
-                <label>Last name
+                
+                <label>Last name </label>
                     <input
                         type='text'
                         value={this.last_name}
                         onChange={this.update('last_name')}
                     />
-                </label>
-                <label>Country
+                
+                <label>Country </label>
                     <input
                         type='text'
                         value={this.country}
                         onChange={this.update('country')}
                     />
-                </label>
+                
                 <button type='submit'>Sign up!</button>            
             </form>
             </div>

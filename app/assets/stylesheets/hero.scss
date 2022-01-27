@@ -14,8 +14,8 @@
 	float: right;
 	padding: 10px;
 	margin: 10px;
-	background-color: rgba(245, 245, 245, 0.349);
-	border: 1px solid rgb(248, 247, 247);
+	background: rgb(180,189,195);
+	background: radial-gradient(circle, rgba(180,189,195,0.37718837535014005) 0%, rgba(123,129,135,0.46682422969187676) 100%);
 	border-radius: 5px;
 	
 }
@@ -40,5 +40,6 @@
 
 .hero-logo img {
 	width: 100%;
+	height: auto;
 
 }

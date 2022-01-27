@@ -46,3 +46,21 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+button {
+	font: inherit;
+	background-color: inherit;
+	text-decoration: inherit;
+	border-radius: 5px;
+	padding: 3px;
+}
+
+input {
+	border-radius: 5px;
+	padding-left: 3px;
+	
+}
+// button:hover{
+// 	background-color:  rgb(218, 190, 35);
+	
+// }
