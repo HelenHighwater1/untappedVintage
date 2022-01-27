@@ -34,7 +34,7 @@ user2 = User.create!(
     last_name: "Gruber",
     country: "Germany",
     email: "Hans4Ever@gmail.de",
-    imgUrl: "https://hansGrueber.jpg"
+    img_url: "https://hansGrueber.jpg"
 )
 
 
