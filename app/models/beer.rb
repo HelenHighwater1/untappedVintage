@@ -1,5 +1,5 @@
-class Beer < ApplicationRecord
+# class Beer < ApplicationRecord
 
-    belongs_to :brewery,
-    
-end
+#     belongs_to :brewery,
+
+# end

@@ -1,20 +1,20 @@
-class Api::BreweriesController < ApplicationController
+# class Api::BreweriesController < ApplicationController
 
-    before_action :require_signed_in
+#     before_action :require_signed_in
 
-    def create
-        @brewery = Brewery.new(brewery_params)
-            if @brewery.save
-                render :show
-            else
-                render json: @user.errors.full_messages, status: 422
-            end
+#     def create
+#         @brewery = Brewery.new(brewery_params)
+#             if @brewery.save
+#                 render :show
+#             else
+#                 render json: @user.errors.full_messages, status: 422
+#             end
 
-    end
+#     end
         
-    private
-    def brewery_params
-        params.require(:brewery).permit(:name, :country)
-    end
+#     private
+#     def brewery_params
+#         params.require(:brewery).permit(:name, :country)
+#     end
 
-end
+# end
