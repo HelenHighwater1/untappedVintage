@@ -4,9 +4,16 @@ Rails.application.routes.draw do
  root "static_pages#root"
 
   namespace :api, defaults: {format: :json} do
+    resources :beers, only: [:create, :index, :show]
+    resources :breweries, only: [:create, :index, :show]
     resource :user, only: [:create]
     resource :session, only: [:create, :destroy, :show]
   end
 
 
 end
+
+
+
+
+

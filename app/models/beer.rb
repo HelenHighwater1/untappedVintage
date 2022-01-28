@@ -1,5 +1,7 @@
-# class Beer < ApplicationRecord
+class Beer < ApplicationRecord
 
-#     belongs_to :brewery,
+    belongs_to :brewery
 
-# end
+    has_many :vintages
+    
+end
