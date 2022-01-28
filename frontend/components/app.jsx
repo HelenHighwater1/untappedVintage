@@ -16,6 +16,7 @@ import HeroContainer from './hero/hero_container';
 import ReviewIndexContainer from './reviews/review_index_container';
 import Navbar from './navbar/navbar_container';
 import Footer from './footer';
+import Oops from './oops';
 
 const mSTP = ({ session, users }) => {
     return { currentUser: users[session.id] }
@@ -28,10 +29,13 @@ const App = (props) => (
         <header>
             <Navbar />
         </header>
+        <Switch>
         <ProtectedRoute exact path="/reviews_index" component={ReviewIndexContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
         <AuthRoute exact path="/login" component={LogInFormContainer} />
-        <Route exact path="/" component={HeroContainer} /> 
+        <Route exact path="/" component={HeroContainer} />
+        <Route component={Oops} />
+        </Switch>
         <footer>
             <Footer />
         </footer>

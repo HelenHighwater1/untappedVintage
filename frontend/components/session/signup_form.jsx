@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 class SignupForm extends React.Component {
     constructor(props){
         super(props)
@@ -18,6 +19,15 @@ class SignupForm extends React.Component {
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value })
     }
+
+    componentWillUnmount() {
+            this.clearErrors()
+    }
+
+    clearErrors() {
+        this.props.receiveErrors([])
+    }
+
 
     handleSubmit(e) {
         e.preventDefault()
@@ -37,19 +47,14 @@ class SignupForm extends React.Component {
             </ul>
         );
     }
-    // getDerivedStateFromProps(nextProps){
-    //     console.log(nextProps)
-    //     this.props.recieveErrors()
-    //     // if (this.props.errors.length > 0)
-    // }
+
 
     render(){
         return(
             <div className = 'hero'>
                     <nav className="login-signup">
 
-                        <Link to="./login" id="text-link">Login</Link>
-                        <Link to="./signup" id="text-link">Sign up!</Link>
+                        
                     </nav>
                 <div className='hero-logo'><img src="/assets/logo.png" alt="untappdVintage" /></div>
 
@@ -98,7 +103,10 @@ class SignupForm extends React.Component {
                                 onChange={this.update('country')}
                             />
                         
-                        <button type='submit'>Sign up!</button>            
+                        <button type='submit'>Sign up!</button>         
+
+                        <p className='login-signup-text-link'>Already have an account?  <Link to="./login" id="text-link">Login</Link></p>
+   
                     </form>
                 </div>
             </div>

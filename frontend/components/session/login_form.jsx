@@ -30,16 +30,23 @@ class LoginForm extends React.Component {
         this.props.login(demoUser)
 
             .then(() => {
-                console.log('Boo')
                 this.props.history.push('/reviews_index')
             });
+    }
+
+    componentWillUnmount() {
+        this.clearErrors()
+    }
+
+    clearErrors() {
+        this.props.receiveErrors([])
     }
 
     renderErrors() {
         return (
             <ul className="errors-ul">
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <li key={`error-${i}`} className='errors'>
                         {error}
                         {/* <FlashMessage duration={5000}>{error}</FlashMessage> */}
                     </li>
@@ -56,11 +63,6 @@ class LoginForm extends React.Component {
     render(){
         return(
             <div className="hero">
-                <nav className="login-signup">
-
-                    <Link to="./login" id="text-link">Login</Link>
-                    <Link to="./signup" id="text-link">Sign up!</Link>
-                </nav>
                 <div className='hero-logo'><img src="/assets/logo.png" alt="untappdVintage" /></div>
 
                 <div className="session-modal">
@@ -86,6 +88,8 @@ class LoginForm extends React.Component {
                         <button type='submit'>Log in!</button>
                      
                         <button onClick={this.loginDemoUser}>Log in as Demo User</button>
+
+                        <p className='login-signup-text-link'>New around here?  <Link to="./signup" id="text-link">Sign up!</Link>  </p>
                     </form>
                 </div>
             </div>

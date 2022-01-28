@@ -32,9 +32,7 @@
 // 	// justify-content: space-between;
 // }
 
-.session-form p {
-	font-size: 10px;
-}
+
 .session-form button {
 	background: rgb(66, 66, 66);
 	border-color: rgb(141, 115, 36);
@@ -55,4 +53,15 @@
 
 }
 
+
+.login-signup-text-link {
+	color: rgb(32, 31, 31);
+	font-size: 15px;
+}
+
+.login-signup-text-link:link {
+	text-decoration: none;
+	color: rgb(240, 160, 12);
+	font-weight: bold;
+}
 // .session-form button

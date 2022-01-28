@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SignupForm from './signup_form';
-import { signup } from '../../actions/session_actions'
+import { receiveErrors, signup } from '../../actions/session_actions'
 
 const mSTP = ({errors}) => ({
     errors: errors.session,
@@ -9,7 +9,8 @@ const mSTP = ({errors}) => ({
 })
 
 const mDTP = dispatch => ({
-    submitAction: user => dispatch(signup(user))
+    submitAction: user => dispatch(signup(user)),
+    receiveErrors: (errors) => dispatch(receiveErrors(errors))
 })
 
 export default connect(mSTP, mDTP)(SignupForm)
