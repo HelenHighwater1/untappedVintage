@@ -6,6 +6,7 @@ class User < ApplicationRecord
     attr_reader :password
 
     has_one_attached :photo
+    has_many :reviews, dependent: :destroy
     
     def self.find_by_credentials(username, password)
         @user = User.find_by(username: username)

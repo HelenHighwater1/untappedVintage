@@ -6,8 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
-
+User.delete_all
+Beer.delete_all
+Review.delete_all
+Brewery.delete_all
 
 demo_user = User.create!(
   username: "guest",
@@ -37,15 +39,415 @@ user2 = User.create!(
     img_url: "https://hansGrueber.jpg"
 )
 
+user3 = User.create!(
+    username: "Helen_E",
+    password: "helloworld",
+    first_name: "Helen",
+    last_name: "Edwards",
+    country: "USA",
+    email: "hgedwards87@gmail.com",
+    img_url: ""
+)
+
+user4 = User.create!(
+    username: "Harry_P",
+    password: "alohamora",
+    first_name: "Harry",
+    last_name: "Potter",
+    country: "England",
+    email: "harryPotter@wizerdingWorld.com",
+    img_url: ""
+)
+
+user5 = User.create!(
+    username: "Ron",
+    password: "RonRon",
+    first_name: "Ron",
+    last_name: "Weasley",
+    country: "England",
+    email: "Ron@wizerdingWorld.com",
+    img_url: ""
+)
+user6 = User.create!(
+    username: "Hagrid",
+    password: "Hagrid",
+    first_name: "Hagrid",
+    last_name: "Hagrid",
+    country: "England",
+    email: "Hagrid@wizerdingWorld.com",
+    img_url: ""
+)
+user6 = User.create!(
+    username: "Draco",
+    password: "Draco",
+    first_name: "Draco",
+    last_name: "Malfoy",
+    country: "England",
+    email: "Draco@wizerdingWorld.com",
+    img_url: ""
+)
+user7 = User.create!(
+    username: "Remus",
+    password: "Remus",
+    first_name: "Remus",
+    last_name: "Lupin",
+    country: "England",
+    email: "Remus@wizerdingWorld.com",
+    img_url: ""
+)
 
 ### Breweries
 
+brewery1 = Brewery.create!(
+  name: "Westvleteren Saint-Sixtus Abbey brewery",
+  country: "Belgium"
+  
+)
+brewery2 = Brewery.create!(
+  name: "St Bernardus Brewery",
+  country: "Belgium"
+
+)
+brewery3 = Brewery.create!(
+  name: "Orval",
+  country: "Belgium"
+
+)
+brewery4 = Brewery.create!(
+  name: "Firestone Walker",
+  country: "USA"
+
+)
+brewery5 = Brewery.create!(
+  name: "Goose Island Brewery",
+  country: "USA"
+
+)
+brewery6 = Brewery.create!(
+  name: "Founders Brewing Co",
+  country: "USA"
+
+)
+brewery7 = Brewery.create!(
+  name: "North Coast Brewing Co",
+  country: "USA"
+
+)
+brewery8 = Brewery.create!(
+  name: "Stone Brewing",
+  country: "USA"
+
+)
+brewery9 = Brewery.create!(
+  name: "Meantime Brewery",
+  country: "England"
+
+)
+brewery10 = Brewery.create!(
+  name: "Brasserie de Rochefort",
+  country: "Belgium"
+
+)
+brewery11 = Brewery.create!(
+  name: "Brouwerij Girardin",
+  country: "Belgium"
+
+)
+brewery12 = Brewery.create!(
+  name: "Dogfish Head",
+  country: "USA"
+
+)
+brewery13 = Brewery.create!(
+  name: "Sierra Nevada",
+  country: "USA"
+
+)
 
 ### Beers
+
+beer1 = Beer.create!(
+  name: "Westvleteren 12",
+  serving_style: "Serve in a challice or stemmed tulip glass, between 46°F- 57°F",
+  brewery_id: brewery1.id
+)
+
+beer2 = Beer.create!(
+  name: "St Bernardus 12",
+  serving_style:  "Serve in a challice or stemmed tulip glass, between 46°F- 57°F",
+  brewery_id: brewery2.id
+)
+
+beer3 = Beer.create!(
+  name: "Orval",
+  serving_style: "Serve in a challice or stemmed tulip glass, between 46°F- 57°F",
+  brewery_id: brewery3.id
+)
+
+beer4 = Beer.create!(
+  name: "Parabola",
+  serving_style: "Serve in a snifter or tulip glass, between 46°F- 57°F",
+  brewery_id: brewery4.id
+)
+
+beer5 = Beer.create!(
+  name: "Bourbon County Stout",
+  serving_style: "Serve between 45°F- 55°F",
+  brewery_id: brewery5.id
+)
+
+beer6 = Beer.create!(
+  name: "KBS",
+  serving_style: "Serve in a snifter or tulip glass, between 46°F- 57°F",
+  brewery_id: brewery6.id
+)
+
+beer7 = Beer.create!(
+  name: "Old Stock Ale",
+  serving_style: "Serve in a pint glass between  50°F- 60°F",
+  brewery_id: brewery7.id
+)
+
+beer8 = Beer.create!(
+  name: "Stone IRS",
+  serving_style: "Serve in a stemmed tulip glass, ideally at 55°F",
+  brewery_id: brewery8.id
+)
+
+beer9 = Beer.create!(
+  name: "Thomas Hardy's Ale",
+  serving_style: "To be enjoyed at 13°C / 55°F, after allowing oxygenation in a large balloon glass. Savour quietly after dinner, in front of a crackling fire.",
+  brewery_id: brewery9.id
+)
+
+beer10 = Beer.create!(
+  name: "Rochefort 10",
+  serving_style: "Serve in a challice or stemmed tulip glass, between 46°F- 57°F",
+  brewery_id: brewery10.id
+)
+
+beer11 = Beer.create!(
+  name: "Girardin Gueuze",
+  serving_style: "Pour very slowly into a stemmed tulip, snifter, or collins glass, at a temperature between  45°F- 55°F",
+  brewery_id: brewery11.id
+)
+
+beer12 = Beer.create!(
+  name: "Burton Baton",
+  serving_style: "Serve in an IPA glass or a snifter, the ideal serving temp is 55°",
+  brewery_id: brewery13.id
+)
+
+beer13 = Beer.create!(
+  name: "Bigfoot",
+  serving_style: "Serve in stemed tulip glass, the ideal serving temp is between 50°F- 55°",
+  brewery_id: brewery13.id
+)
 
 
 ###  Reviews
 
+
+review1 = Review.create!(
+  user_id: user1.id,
+  beer_id: beer1.id,
+  # vintage_id: 2017,
+  review: 'This is the best beer on earth!',
+  rating: 5,
+  # img_url: ''
+)
+
+review2 = Review.create!(
+  user_id: user2.id,
+  beer_id: beer1.id,
+  # vintage_id: 2010,
+  review: "It aged too long - it is completely flat and too sweet.  It tastes like a very nutty port",
+  rating: 2,
+  # img_url: ''
+)
+
+review3 = Review.create!(
+  user_id: user4.id,
+  beer_id: beer1.id,
+  # vintage_id: 2014,
+  review: "Great beer!  Getting pretty flat though, it probably would have been best 2 years ago.  Still interesting to drink, nutty and mellow",
+  rating: 4,
+  # img_url: ''
+
+)
+
+review4 = Review.create!(
+  user_id: user5.id,
+  beer_id: beer1.id,
+  # vintage_id: 2019,
+  review: "Great taste - still as bubbly as the new ones, maybe a touch mellower with a nice nuttiness",
+  rating: 5,
+  # img_url: ''
+)
+review5 = Review.create!(
+  user_id: user5.id,
+  beer_id: beer2.id,
+  # vintage_id: 2011,
+  review: "Cellar aged for 10 years. Definitely the best cellar aged beer from my collection so far.  Mellowed out well, you can really taste the complexity",
+  rating: 5,
+  # img_url: ''
+)
+review6 = Review.create!(
+  user_id: user7.id,
+  beer_id: beer2.id,
+  # vintage_id: 2017,
+  review: "Caramel, super smooth. Has aged very well.",
+  rating: 5,
+  # img_url: ''
+)
+review7 = Review.create!(
+  user_id: user6.id,
+  beer_id: beer2.id,
+  # vintage_id: 2019,
+  review: "Raisins, plums, figs. Like a humbug candy it’s so smooth and sweet. Bread pudding notes in there. ",
+  rating: 5,
+  # img_url: ''
+)
+review8 = Review.create!(
+  user_id: user2.id,
+  beer_id: beer1.id,
+  # vintage_id: 2021,
+  review: "De reviews zeggen één van de beste biertjes, dus laten we eens proeven! En proeven doe ik! Heerlijk zacht, moutig en zoet van smaak met lichte tonen van karamel, koffie en rozijnen! Heerlijk gebalanceerd, maar toch erg smaakvol! De reviews liegen niet!",
+  rating: 5,
+  # img_url: ''
+
+)
+review9 = Review.create!(
+  user_id: user7.id,
+  beer_id: beer1.id,
+  # vintage_id: 2011,
+  review: " I would not recommend aging any beer as long as 11 years, the biggest issue is carbonation will begin to fail, the complexity is degraded, the alcohol was less noticeable but the pleasant aspects of the taste are diminished as well, I would not recommend aging, I know you can but, it's not as good, I would drink this beer as soon as possible.",
+  rating: 4,
+  # img_url: ''
+
+)
+review10 = Review.create!(
+  user_id: user6.id,
+  beer_id: beer1.id,
+  # vintage_id: 2018,
+  review: "Poured the color of cold brew coffee and sports a manilla color head which leaves copious lacing.
+The aroma was stone fruit and malts, I tried to find spices but failed. Still, excellent aroma.
+The taste, wow; while it pretty much followed the aroma, the layers and power of flavors is impressive. Stone fruit mingling with biscuit like malts and they made an excellent pair.
+The feel was very good, way too easy to drink. I expected something more viscous but this really works.
+OA, excellent beer and so glad I got to try it!
+",
+  rating: 5,
+  # img_url: ''
+
+)
+review11 = Review.create!(
+  user_id: user3.id,
+  beer_id: beer1.id,
+  # vintage_id: 2017,
+  review: "This one had rested for about 5 years. It poured a dark plum to prune color with still a good level of carbonation. The aroma was wonderful stone fruit. The complex character was true to form as still to me the best beer in the world. It made the perfect Thanksgiving beer and made me appreciate the good things in the world. Cheers.",
+  rating: 5,
+  # img_url: ''
+
+)
+review12 = Review.create!(
+  user_id: user3.id,
+  beer_id: beer3.id,
+  # vintage_id: 2013,
+  review: "Wow - this beer ages better than any other I've tried!  It has really mellowed out nicely",
+  rating: 5,
+  # img_url: ''
+
+)
+# review13 = Review.create!(
+#   user_id: ,
+#   beer_id: ,
+#   vintage_id: ,
+#   review: ,
+#   rating: ,
+#   img_url: 
+
+# )
+# review14 = Review.create!(
+#   user_id: ,
+#   beer_id: ,
+#   vintage_id: ,
+#   review: ,
+#   rating: ,
+#   img_url: 
+
+# )
+# review15 = Review.create!(
+#   user_id: ,
+#   beer_id: ,
+#   vintage_id: ,
+#   review: ,
+#   rating: ,
+#   img_url: 
+
+# )
+# review16 = Review.create!(
+#   user_id: ,
+#   beer_id: ,
+#   vintage_id: ,
+#   review: ,
+#   rating: ,
+#   img_url: 
+
+# )
+# review17 = Review.create!(
+#   user_id: ,
+#   beer_id: ,
+#   vintage_id: ,
+#   review: ,
+#   rating: ,
+#   img_url: 
+
+# )
+# review18 = Review.create!(
+#   user_id: ,
+#   beer_id: ,
+#   vintage_id: ,
+#   review: ,
+#   rating: ,
+#   img_url: 
+
+# )
+# review19 = Review.create!(
+#   user_id: ,
+#   beer_id: ,
+#   vintage_id: ,
+#   review: ,
+#   rating: ,
+#   img_url: 
+
+# )
+# review20 = Review.create!(
+#   user_id: ,
+#   beer_id: ,
+#   vintage_id: ,
+#   review: ,
+#   rating: ,
+#   img_url: 
+
+# )
+# review21 = Review.create!(
+#   user_id: ,
+#   beer_id: ,
+#   vintage_id: ,
+#   review: ,
+#   rating: ,
+#   img_url: 
+
+# )
+# review22 = Review.create!(
+#   user_id: ,
+#   beer_id: ,
+#   vintage_id: ,
+#   review: ,
+#   rating: ,
+#   img_url: 
+
+# )
 
 ### Flavor Profiles
 

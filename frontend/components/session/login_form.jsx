@@ -54,11 +54,7 @@ class LoginForm extends React.Component {
             </ul>
         );
     }
-    // componentWillReceiveProps(nextProps){
-    //     console.log(nextProps)
-    //     this.props.recieveErrors()
-        // if (this.props.errors.length > 0)
-    // }
+
 
     render(){
         return(

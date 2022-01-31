@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :breweries, only: [:create, :index, :show]
     resource :user, only: [:create]
     resource :session, only: [:create, :destroy, :show]
+    resources :reviews, only: [:create, :index, :show, :update, :destroy]
   end
 
 

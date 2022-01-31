@@ -1,4 +1,4 @@
-#footer {
+.footer-links {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -6,11 +6,20 @@
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px; 
     justify-content: space-evenly;
 
 }
-#footer > a, img {
+.footer-link{
     display: flex;
     height: 60px;
     width:60px;
 }
+
+.footer-link:hover {
+    padding: 5px;
+    outline: 2px solid grey;
+    border-radius: 3px;
+    box-shadow: 7px 4px 4px rgba(110, 110, 110, 0.322);
+}
+

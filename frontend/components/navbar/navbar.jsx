@@ -16,12 +16,11 @@ class Navbar extends React.Component {
 
     render() {
         const navStatus = this.props.currentUser ? ("nav-not-hidden") : ("nav-hidden")
-        // const dropdownHover = (e) => {
-        //      this.setState({ display: 'none' })
-        // }
+
         return (
             <div className={navStatus}>
-    
+                
+                <div className="nav-logo"><img src="/assets/logo.png" alt="untappdVintage" /></div>
                 <div>
 
                 </div>

@@ -21,6 +21,16 @@ class Api::BeersController < ApplicationController
         end
     end
 
+    def index 
+        @beers = Beer.all
+        if @beers
+            render :show
+        else
+            render json: @beer.errors.full_messages
+        end
+
+    end
+
 
 
     private

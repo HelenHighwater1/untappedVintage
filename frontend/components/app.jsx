@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
-
+import CreateBeer from './beer/beer_form_container';
 import SignUpFormContainer from './session/signup_form_container';
 import LogInFormContainer from './session/login_form_container';
 import HeroContainer from './hero/hero_container';
@@ -18,9 +18,9 @@ import Navbar from './navbar/navbar_container';
 import Footer from './footer';
 import Oops from './oops';
 
-const mSTP = ({ session, users }) => {
-    return { currentUser: users[session.id] }
-}
+// const mSTP = ({ session, users }) => {
+//     return { currentUser: users[session.id] }
+// }
 
 
 
@@ -30,11 +30,12 @@ const App = (props) => (
             <Navbar />
         </header>
         <Switch>
-        <ProtectedRoute exact path="/reviews_index" component={ReviewIndexContainer} />
-        <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-        <AuthRoute exact path="/login" component={LogInFormContainer} />
-        <Route exact path="/" component={HeroContainer} />
-        <Route component={Oops} />
+            <ProtectedRoute exact path="/create_beer" component={CreateBeer} />
+            <ProtectedRoute exact path="/reviews_index" component={ReviewIndexContainer} />
+            <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+            <AuthRoute exact path="/login" component={LogInFormContainer} />
+            <Route exact path="/" component={HeroContainer} />
+            <Route component={Oops} />
         </Switch>
         <footer>
             <Footer />
