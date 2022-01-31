@@ -4,19 +4,17 @@ export const RECEIVE_BEERS = 'RECEIVE_BEERS';
 export const RECEIVE_BEER = 'RECEIVE_BEER';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 
-const receiveBeers = (beers) => ({
+export const receiveBeers = (beers) => ({
     type: RECEIVE_BEERS,
     beers
 });
 
-const receiveBeer = ({ beer, reviews, authors}) => ({
-    type: RECEIVE_BEER,
-    beer,
-    reviews,
-    authors
-});
+export const receiveBeer = ( beer ) => {
+    return {type: RECEIVE_BEER,
+    beer}
+};
 
-const receiveReview = ({ review, author }) => ({
+export const receiveReview = ({ review, author }) => ({
     type: RECEIVE_REVIEW,
     review,
     author
@@ -35,9 +33,8 @@ export const fetchBeers = () => dispatch => (
 );
 
 export const fetchBeer = (id) => dispatch => (
-    APIUtil.fetchBeeer(id).then(payload => (
-        dispatch(receiveBeer(payload))
-    ))
+    APIUtil.fetchBeer(id).then(payload => {
+        return (dispatch(receiveBeer(payload))) })
 );
 
 export const createBeer = (beer) => dispatch => (
