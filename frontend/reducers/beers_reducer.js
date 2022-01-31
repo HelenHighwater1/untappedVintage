@@ -1,9 +1,9 @@
-import { RECEIVE_BEEERS, RECEIVE_BEER, RECEIVE_REVIEW } from '../actions/beer_actions';
+import { RECEIVE_BEERS, RECEIVE_BEER, RECEIVE_REVIEW } from '../actions/beer_actions';
 
 const BeersReducer = (state = {}, action) => {
     Object.freeze(state)
     switch (action.type) {
-        case RECEIVE_BEEERS:
+        case RECEIVE_BEERS:
             return action.beers;
         case RECEIVE_BEER:
             const newBeer = { [action.beer.id]: action.beer };

@@ -27,9 +27,9 @@ export const createReview = (review) => dispatch => (
 );
 
 export const fetchBeers = () => dispatch => (
-    APIUtil.fetchBeers().then(beers => (
-        dispatch(receiveBeers(beers))
-    ))
+    APIUtil.fetchBeers().then(beers => {
+        return dispatch(receiveBeers(beers))
+    })
 );
 
 export const fetchBeer = (id) => dispatch => (

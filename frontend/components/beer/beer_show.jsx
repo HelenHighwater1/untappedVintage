@@ -14,7 +14,7 @@ class BeerShow extends React.Component {
 
     render() {
         const  beer  = this.props.beer
-        console.log(beer)
+    
         if (!beer) {
             return (
                 <><div className='buffer'></div>
