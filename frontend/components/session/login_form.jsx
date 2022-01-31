@@ -30,7 +30,7 @@ class LoginForm extends React.Component {
         this.props.login(demoUser)
 
             .then(() => {
-                this.props.history.push('/reviews_index')
+                this.props.history.push('/beers')
             });
     }
 

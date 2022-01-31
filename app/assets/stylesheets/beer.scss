@@ -1,0 +1,41 @@
+.beer-index {
+    display: block;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.beer-index-item {
+    padding: 10px;
+
+    border: 1px solid gold
+}
+
+
+.beer-thumbnail {
+    display: block;
+    float: left;
+    width: auto;
+    height: 90px;
+    padding-right: 10px
+}
+
+.beer-form {
+    display: flex;
+    flex-direction: column; 
+    width: 600px;
+    padding: 10px;
+    border: 1px solid goldenrod;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.beer-form label {
+	display: flex;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	color: rgb(0, 0, 0);
+
+}

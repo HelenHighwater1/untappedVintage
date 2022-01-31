@@ -23,6 +23,11 @@ time, mark, audio, video {
     font-family: 'Comfortaa', cursive;
 	vertical-align: baseline;
 }
+:Link {
+	text-decoration: none;
+	font: inherit;
+	color: inherit;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -62,5 +67,9 @@ input {
 }
 // button:hover{
 // 	background-color:  rgb(218, 190, 35);
-	
+
 // }
+
+.header {
+	text-align: center
+}

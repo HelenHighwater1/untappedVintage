@@ -26,13 +26,17 @@ class BeerIndex extends React.Component {
         return (
              <>
                 <div className="buffer"></div><div>
-                <ul>
+                <h1 className = "header">Beer Index</h1>
+                <ul className = "beer-index">
                     {
                         beers.map(beer => {
-                            console.log('inside the map')
-                            return (<li>
-                                <Link to={`/beers/${beer.id}`}>{beer.name}</Link>
-                                <p>country: {beer.brewery.country}</p>
+                            return (<li className = "beer-index-item" key={beer.id}>
+                                <img className = 'beer-thumbnail' src="/assets/trappist10.jpeg" alt={beer.name} />
+                                <Link to={`/beers/${beer.id}`}><h3>{beer.name}</h3></Link>
+                                <ul>
+                                    <li>Brewery: {beer.brewery.name}</li>
+                                    <li>Country: {beer.brewery.country}</li>
+                                </ul>
                             </li>)
                         })
                     }

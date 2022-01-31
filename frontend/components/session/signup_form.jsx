@@ -32,7 +32,7 @@ class SignupForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
         this.props.submitAction(this.state)
-            .then(() => this.props.history.push('/review_index'));
+            .then(() => this.props.history.push('/beers'));
             
     }
     

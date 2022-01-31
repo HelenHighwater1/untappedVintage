@@ -19,35 +19,19 @@ class CreateBeer extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        this.props.submitAction(this.state)
-            .then(() => this.props.history.push('/create_beer'));
+        this.props.createBeer(this.state)
+            .then(() => this.props.history.push('/beers'));
 
     }
 
-    // renderErrors() {
-    //     return (
-    //         <ul className="errors-ul">
-    //             {this.props.errors.map((error, i) => (
-    //                 <li key={`error-${i}`} className='errors'>
-    //                     {error}
-    //                     {/* <FlashMessage duration={5000}>{error}</FlashMessage> */}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
-
-    // clearErrors() {
-    //     this.props.receiveErrors([])
-    // }
 
     render() {
         return (
            <div>
                <div className="buffer"></div>
-                <div>Create A New Beer</div>
-                <form> 
-                    {/* {this.renderErrors()} */}
+                
+                <form className='beer-form' onSubmit={this.handleSubmit}> 
+                    <h1 padding="10px">Create A New Beer</h1>
                     <label>Beer Name</label>
                     <input
                         type="text"
@@ -65,9 +49,10 @@ class CreateBeer extends React.Component {
                         value={this.state.serving_style}
                         onChange={this.update('serving_style')}
                     />
-
+                    <button type='submit'>Create Beer!</button>
 
                 </form>
+             
            </div>
                 
            
