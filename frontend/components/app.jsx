@@ -10,6 +10,7 @@ import {
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import CreateBeer from './beer/beer_form_container';
+import EditBeer from './beer/update_beer_form_container';
 import ShowBeer from './beer/beer_show_container';
 import BeerIndexContainer from './beer/beer_index_container';
 import SignUpFormContainer from './session/signup_form_container';
@@ -33,6 +34,7 @@ const App = (props) => (
         </header>
         <Switch>
             <ProtectedRoute exact path="/create_beer" component={CreateBeer} />
+            <ProtectedRoute exact path="/edit_beer/:beerId" component={EditBeer} />
             <ProtectedRoute exact path="/reviews_index" component={ReviewIndexContainer} />
             <Route exact path="/beers/:beerId" component={ShowBeer}/>
             <Route exact path="/beers" component={BeerIndexContainer} />

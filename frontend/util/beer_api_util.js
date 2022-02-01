@@ -18,6 +18,15 @@ export const createBeer = beer => (
 
     })
 );
+export const updateBeer = beer => {
+    return (
+    $.ajax({
+        method: 'PATCH',
+        url: `api/beers/${beer.id}`,
+        data: { beer },
+
+    }))
+};
 
 export const createReview = review => (
     $.ajax({
@@ -26,3 +35,10 @@ export const createReview = review => (
         data: { review }
     })
 );
+
+export const deleteBeer = id => (
+    $.ajax({
+        url: `/api/beers/${id}/`,
+        method: 'DELETE'
+    })
+)

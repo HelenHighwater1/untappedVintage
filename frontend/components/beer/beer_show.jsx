@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 
 class BeerShow extends React.Component {
     constructor(props) {
@@ -33,6 +33,7 @@ class BeerShow extends React.Component {
                     <h3>{beer.name}</h3>
                     <p>{beer.brewery.name}</p>
                     <p>{beer.serving_style}</p>
+                    <Link to={`/edit_beer/${beer.id}`}>Update Beer</Link>
                 </div>
             </div>
             </>

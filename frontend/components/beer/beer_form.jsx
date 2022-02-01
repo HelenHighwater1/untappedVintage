@@ -51,9 +51,6 @@ class CreateBeer extends React.Component {
     
     render() {
         const breweries = this.props.breweries
-
-        console.log('in render -- ', this.state.brewery_id)
-    
         let breweryComboBox = null
         if (breweries.length > 0) {
             breweryComboBox = <BreweryComboBox breweries={breweries} onChange={this.update('brewery_id')} onSelect={this.updateSelect('brewery_id')} />

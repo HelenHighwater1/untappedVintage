@@ -3,6 +3,8 @@ import * as APIUtil from '../util/beer_api_util';
 export const RECEIVE_BEERS = 'RECEIVE_BEERS';
 export const RECEIVE_BEER = 'RECEIVE_BEER';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
+export const REMOVE_BEER = 'REMOVE_BEER';
+
 
 export const receiveBeers = (beers) => ({
     type: RECEIVE_BEERS,
@@ -19,6 +21,12 @@ export const receiveReview = ({ review, author }) => ({
     review,
     author
 });
+
+export const removeBeer = beerId => ({
+    type: REMOVE_BEER,
+    beerId
+});
+
 
 export const createReview = (review) => dispatch => (
     APIUtil.createReview(review).then(review => (
@@ -41,4 +49,14 @@ export const createBeer = (beer) => dispatch => (
     APIUtil.createBeer(beer).then(beer => (
         dispatch(receiveBeer(beer))
     ))
+);
+export const updateBeer = (beer) => dispatch => (
+    APIUtil.updateBeer(beer).then(beer => (
+        dispatch(receiveBeer(beer))
+    ))
+);
+
+export const deleteBeer = (id) => dispatch => (
+    APIUtil.deleteBeer(id)
+    .then(() => (dispatch(removeBeer(id))))
 );
