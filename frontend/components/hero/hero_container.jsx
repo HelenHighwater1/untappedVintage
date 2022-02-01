@@ -4,7 +4,7 @@ import { signup } from '../../actions/session_actions'
 import { login } from '../../actions/session_actions'
 //do I need to know if theres a current user here? 
 
-const mSTP = ({ session, users }) => {
+const mSTP = ({ session, entities: {users} }) => {
     return { currentUser: users[session.id] }
 }
 

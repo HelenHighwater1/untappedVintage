@@ -28,11 +28,12 @@ class BeerShow extends React.Component {
             <>
             <div className='buffer'></div>
             <div className = "beer-show">
-                <div className= 'beer-name'>
-                    {beer.name}
+                <img className='beer-thumbnail' src="/assets/trappist10.jpeg" alt={beer.name} />
+                <div className = "beer-show-info">
+                    <h3>{beer.name}</h3>
+                    <p>{beer.brewery.name}</p>
+                    <p>{beer.serving_style}</p>
                 </div>
-                <p>{beer.brewery.name}</p>
-                <p>{beer.serving_style}</p>
             </div>
             </>
         )

@@ -5,7 +5,7 @@ import { selectBeer } from '../../reducers/selectors';
 
 
 const mSTP = (state, ownProps ) => {
-    return {beer: state.beers[ownProps.match.params.beerId]}
+    return {beer: state.entities.beers[ownProps.match.params.beerId]}
     
 };
 

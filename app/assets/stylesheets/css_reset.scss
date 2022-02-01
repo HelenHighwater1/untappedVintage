@@ -65,6 +65,8 @@ input {
 	padding-left: 3px;
 	
 }
+
+
 // button:hover{
 // 	background-color:  rgb(218, 190, 35);
 
@@ -72,4 +74,9 @@ input {
 
 .header {
 	text-align: center
+}
+
+a:visited { 
+ text-decoration: none; 
+ color: inherit; 
 }

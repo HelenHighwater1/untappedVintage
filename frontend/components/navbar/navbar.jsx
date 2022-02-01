@@ -21,11 +21,11 @@ class Navbar extends React.Component {
             <div className={navStatus}>
                 
                 <div className="nav-logo"><img src="/assets/logo.png" alt="untappdVintage" /></div>
-                {/* <div className="main-nav">
+                <div className="main-nav">
                     <Link to="/beers">Pub</Link>
                     <Link to="/reviews_index">Top Rated</Link>
 
-                </div> */}
+                </div>
                 <div className='dropdown-menu' 
                     onMouseEnter={e => {
                         this.setState({ display: {display: 'block'} });

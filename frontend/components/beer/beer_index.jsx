@@ -7,14 +7,14 @@ class BeerIndex extends React.Component {
     }
     componentDidMount() {
         this.props.fetchBeers();
-        console.log('beer!')
+   
     }
 
     render() {
         const beers = this.props.beers
-        console.log(beers)
+       
         if (!beers) {
-            console.log('!beers')
+        
             return (
                 <>
                 <div className="buffer"></div>
@@ -25,7 +25,8 @@ class BeerIndex extends React.Component {
         
         return (
              <>
-                <div className="buffer"></div><div>
+                <div className="buffer"></div>
+                <div>
                 <h1 className = "header">Beer Index</h1>
                 <ul className = "beer-index">
                     {
@@ -41,7 +42,7 @@ class BeerIndex extends React.Component {
                         })
                     }
                 </ul>
-         
+                    <div className = "create-beer-p">Can't find the beer you are looking for?<span>...</span>  <Link to="./create_beer" id="text-link">  Add your fav beer!</Link></div>
                 </div>
             </>
         );

@@ -7,18 +7,22 @@
 }
 
 .beer-index-item {
-    padding: 10px;
-
-    border: 1px solid gold
+    padding: 15px;
+    height: 120px; 
+    border-bottom: 1px solid goldenrod
 }
 
+.beer-index-item h3:hover {
+    color: rgb(228, 141, 28);
+    font-weight: bolder;
+}
 
 .beer-thumbnail {
     display: block;
     float: left;
     width: auto;
     height: 90px;
-    padding-right: 10px
+    padding: 10px
 }
 
 .beer-form {
@@ -33,9 +37,31 @@
 }
 
 .beer-form label {
-	display: flex;
+	display: flex; 
 	margin-top: 10px;
 	margin-bottom: 5px;
 	color: rgb(0, 0, 0);
 
+}
+
+.beer-show {
+    display: flex;
+    flex-direction: row; 
+    width: 800px;
+    padding: 10px;
+    border: 1px solid goldenrod;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.beer-show-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-beer-p {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -4,7 +4,7 @@ import { fetchBeers } from '../../actions/beer_actions';
 
 
 const mSTP = state => ({
-    beers: Object.values(state.beers)
+    beers: Object.values(state.entities.beers)
 });
 
 const mDTP = dispatch => ({
