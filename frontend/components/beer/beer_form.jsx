@@ -9,7 +9,8 @@ class CreateBeer extends React.Component {
         this.state = {
             name: '',
             brewery_id: '',
-            serving_style: ''
+            serving_style: '',
+            photoFile: null
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.findBreweryId = this.findBreweryId.bind(this)
@@ -27,12 +28,27 @@ class CreateBeer extends React.Component {
         e.preventDefault()
         let breweryId = this.findBreweryId(this.state.brewery_id)
         this.setState({brewery_id: breweryId})
-        console.log('this.brewery=', this.state.brewery_id)
-        this.props.createBeer({
-            name: this.state.name,
-            brewery_id: breweryId,
-            serving_style: this.state.serving_style
+        // console.log('this.brewery=', this.state.brewery_id)
+        // this.props.createBeer({
+        //     name: this.state.name,
+        //     brewery_id: breweryId,
+        //     serving_style: this.state.serving_style
+        // })
+
+        const formData = new FormData();
+        formData.append('beer[name]', this.state.name)
+        formData.append('beer[brewery_id]', breweryId)
+        formData.append('beer[serving_style]', this.state.serving_style)
+        formData.append('beer[photo]', this.state.photoFile)
+debugger
+        $.ajax({
+            url: '/api/beers',
+            method: 'POST',
+            data: formData,
+            contentType: false,
+            processData: false
         })
+
             .then(() => this.props.history.push('/beers'));
 
     }
@@ -49,6 +65,10 @@ class CreateBeer extends React.Component {
         this.props.fetchBreweries();
     }
     
+    handleFile(e) {
+        this.setState({photoFile: e.currentTarget.files[0]})
+    }
+
     render() {
         const breweries = this.props.breweries
         let breweryComboBox = null
@@ -75,6 +95,13 @@ class CreateBeer extends React.Component {
                         value={this.state.serving_style}
                         onChange={this.update('serving_style')}
                     />
+                    <br/>
+                    <label>Add a Photo</label>
+                    <input 
+                        type='file'
+                        onChange={this.handleFile.bind(this)}
+                    />
+                    <br />
                     <button type='submit'>Create Beer!</button>
 
                 </form>

@@ -13,7 +13,7 @@ class BeerShow extends React.Component {
     }
 
     render() {
-        const  beer  = this.props.beer
+        const beer  = this.props.beer
     
         if (!beer) {
             return (
@@ -23,12 +23,13 @@ class BeerShow extends React.Component {
                 
             )
         }
+        console.log('this photoUrl =', this.photoUrl)
     
         return (
             <>
             <div className='buffer'></div>
             <div className = "beer-show">
-                <img className='beer-thumbnail' src="/assets/trappist10.jpeg" alt={beer.name} />
+                <img className='beer-thumbnail' src={beer.photoUrl} alt={beer.name} />
                 <div className = "beer-show-info">
                     <h3>{beer.name}</h3>
                     <p>{beer.brewery.name}</p>

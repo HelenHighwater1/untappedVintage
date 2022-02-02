@@ -22,7 +22,7 @@ class BeerIndex extends React.Component {
                 </>
             )
         }
-        
+        // debugger
         return (
              <>
                 <div className="buffer"></div>
@@ -32,7 +32,7 @@ class BeerIndex extends React.Component {
                     {
                         beers.map(beer => {
                             return (<li className = "beer-index-item" key={beer.id}>
-                                <img className = 'beer-thumbnail' src="/assets/trappist10.jpeg" alt={beer.name} />
+                                <img className='beer-thumbnail' src={beer.photoUrl} alt={beer.name} />
                                 <Link to={`/beers/${beer.id}`}><h3>{beer.name}</h3></Link>
                                 <ul>
                                     <li>Brewery: {beer.brewery.name}</li>

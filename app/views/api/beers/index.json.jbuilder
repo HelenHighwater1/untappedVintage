@@ -8,4 +8,7 @@ json.array!(@beers) do |beer|
     json.id beer.id
     json.name beer.name
     json.brewery beer.brewery
+    if beer.photo.attached?
+         json.photoUrl url_for(beer.photo) 
+    end
 end

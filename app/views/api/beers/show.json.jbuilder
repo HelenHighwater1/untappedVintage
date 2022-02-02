@@ -1,1 +1,2 @@
-json.extract! @beer, :id, :name, :brewery, :serving_style   
+json.extract! @beer, :id, :name, :brewery, :serving_style
+json.photoUrl url_for(@beer.photo) 
