@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { receiveErrors, createBeer } from '../../actions/beer_actions';
+import { createBeer } from '../../actions/beer_actions';
 import { fetchBreweries } from '../../actions/brewery_actions';
 import BeerForm from './beer_form';
 

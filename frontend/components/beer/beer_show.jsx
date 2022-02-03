@@ -12,6 +12,7 @@ class BeerShow extends React.Component {
         this.props.fetchBeer(this.props.match.params.beerId);
     }
 
+
     render() {
         const beer  = this.props.beer
     
@@ -23,7 +24,7 @@ class BeerShow extends React.Component {
                 
             )
         }
-        console.log('this photoUrl =', this.photoUrl)
+       
     
         return (
             <>
@@ -35,7 +36,10 @@ class BeerShow extends React.Component {
                     <p>{beer.brewery.name}</p>
                     <p>{beer.serving_style}</p>
                     <Link to={`/edit_beer/${beer.id}`}>Update Beer</Link>
+                    <div className="create-review-button">Drinking this beer now?<Link to="/create_review" id="text-link"> Check-in and add a Review!</Link></div>
                 </div>
+                
+
             </div>
             </>
         )

@@ -1,0 +1,21 @@
+.split-page {
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.split-main {
+    display: flex; 
+    flex-direction: column;
+    width: 60%;
+    padding: 20px;
+    justify-content: left;
+
+}
+
+.split-right{
+    display: flex; 
+    flex-direction: column;
+    width: 30%;
+}

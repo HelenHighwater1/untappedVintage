@@ -282,91 +282,121 @@ beer13 = Beer.create!(
 photo_13 = URI.open('https://wtop.com/wp-content/uploads/2021/02/botw.jpg')
 beer13.photo.attach(io: photo_13, filename: "bigfoot")
 
+
+### Vintages 
+vintage30	 =  Vintage.create!(year: 1999)
+vintage31	 =  Vintage.create!(year: 2000)
+vintage32	 =  Vintage.create!(year: 2001)
+vintage33	 =  Vintage.create!(year: 2002)
+vintage34	 =  Vintage.create!(year: 2003)
+vintage35	 =  Vintage.create!(year: 2004)
+vintage36	 =  Vintage.create!(year: 2005)
+vintage37	 =  Vintage.create!(year: 2006)
+vintage38	 =  Vintage.create!(year: 2007)
+vintage39	 =  Vintage.create!(year: 2008)
+vintage40	 =  Vintage.create!(year: 2009)
+vintage41	 =  Vintage.create!(year: 2010)
+vintage42	 =  Vintage.create!(year: 2011)
+vintage43	 =  Vintage.create!(year: 2012)
+vintage44	 =  Vintage.create!(year: 2013)
+vintage45	 =  Vintage.create!(year: 2014)
+vintage46	 =  Vintage.create!(year: 2015)
+vintage47	 =  Vintage.create!(year: 2016)
+vintage48	 =  Vintage.create!(year: 2017)
+vintage49	 =  Vintage.create!(year: 2018)
+vintage50	 =  Vintage.create!(year: 2019)
+vintage51	 =  Vintage.create!(year: 2020)
+vintage52	 =  Vintage.create!(year: 2021)
+vintage53	 =  Vintage.create!(year: 2022)
+vintage54	 =  Vintage.create!(year: 2023)
+vintage55	 =  Vintage.create!(year: 2024)
+vintage56	 =  Vintage.create!(year: 2025)
+vintage57	 =  Vintage.create!(year: 2026)
 ###  Reviews
 
 
 review1 = Review.create!(
   user_id: user1.id,
   beer_id: beer1.id,
-  # vintage_id: 2017,
+  vintage_id: vintage48.id,
   review: 'This is the best beer on earth!',
   rating: 5,
-  # img_url: ''
 )
+rev_photo1 = URI.open('https://theculturetrip.com/wp-content/uploads/2016/11/-reuben-grayflickr.jpg')
+review1.photo.attach(io: rev_photo1, filename: "rev_photo1")
+
 
 review2 = Review.create!(
   user_id: user2.id,
   beer_id: beer1.id,
-  # vintage_id: 2010,
+  vintage_id: vintage41.id,
   review: "It aged too long - it is completely flat and too sweet.  It tastes like a very nutty port",
   rating: 2,
-  # img_url: ''
 )
+
 
 review3 = Review.create!(
   user_id: user4.id,
   beer_id: beer1.id,
-  # vintage_id: 2014,
+  vintage_id: vintage45.id,
   review: "Great beer!  Getting pretty flat though, it probably would have been best 2 years ago.  Still interesting to drink, nutty and mellow",
   rating: 4,
-  # img_url: ''
-
 )
 
 review4 = Review.create!(
   user_id: user5.id,
   beer_id: beer1.id,
-  # vintage_id: 2019,
+  vintage_id: vintage50.id,
   review: "Great taste - still as bubbly as the new ones, maybe a touch mellower with a nice nuttiness",
   rating: 5,
-  # img_url: ''
 )
 review5 = Review.create!(
   user_id: user5.id,
   beer_id: beer2.id,
-  # vintage_id: 2011,
+  vintage_id: vintage42.id,
   review: "Cellar aged for 10 years. Definitely the best cellar aged beer from my collection so far.  Mellowed out well, you can really taste the complexity",
   rating: 5,
-  # img_url: ''
 )
+rev_photo5 = URI.open('https://images.squarespace-cdn.com/content/59b02a56ccc5c51518e820d4/1606962742100-PYFRZAO1U05OD7Q04A2V/DSC02933.jpg?content-type=image%2Fjpeg')
+review5.photo.attach(io: rev_photo5, filename: "rev_photo5")
+
 review6 = Review.create!(
   user_id: user7.id,
   beer_id: beer2.id,
-  # vintage_id: 2017,
+  vintage_id: vintage48.id,
   review: "Caramel, super smooth. Has aged very well.",
   rating: 5,
-  # img_url: ''
 )
+
 review7 = Review.create!(
   user_id: user6.id,
   beer_id: beer2.id,
-  # vintage_id: 2019,
+  vintage_id: vintage50.id,
   review: "Raisins, plums, figs. Like a humbug candy it’s so smooth and sweet. Bread pudding notes in there. ",
   rating: 5,
-  # img_url: ''
 )
+
 review8 = Review.create!(
   user_id: user2.id,
   beer_id: beer1.id,
-  # vintage_id: 2021,
+  vintage_id: vintage52.id,
   review: "De reviews zeggen één van de beste biertjes, dus laten we eens proeven! En proeven doe ik! Heerlijk zacht, moutig en zoet van smaak met lichte tonen van karamel, koffie en rozijnen! Heerlijk gebalanceerd, maar toch erg smaakvol! De reviews liegen niet!",
   rating: 5,
-  # img_url: ''
-
 )
+
+
 review9 = Review.create!(
   user_id: user7.id,
   beer_id: beer1.id,
-  # vintage_id: 2011,
+  vintage_id: vintage42.id,
   review: " I would not recommend aging any beer as long as 11 years, the biggest issue is carbonation will begin to fail, the complexity is degraded, the alcohol was less noticeable but the pleasant aspects of the taste are diminished as well, I would not recommend aging, I know you can but, it's not as good, I would drink this beer as soon as possible.",
   rating: 4,
-  # img_url: ''
-
 )
+
 review10 = Review.create!(
   user_id: user6.id,
   beer_id: beer1.id,
-  # vintage_id: 2018,
+  vintage_id: vintage49.id,
   review: "Poured the color of cold brew coffee and sports a manilla color head which leaves copious lacing.
 The aroma was stone fruit and malts, I tried to find spices but failed. Still, excellent aroma.
 The taste, wow; while it pretty much followed the aroma, the layers and power of flavors is impressive. Stone fruit mingling with biscuit like malts and they made an excellent pair.
@@ -374,27 +404,26 @@ The feel was very good, way too easy to drink. I expected something more viscous
 OA, excellent beer and so glad I got to try it!
 ",
   rating: 5,
-  # img_url: ''
-
 )
+
 review11 = Review.create!(
   user_id: user3.id,
   beer_id: beer1.id,
-  # vintage_id: 2017,
+  vintage_id: vintage48.id,
   review: "This one had rested for about 5 years. It poured a dark plum to prune color with still a good level of carbonation. The aroma was wonderful stone fruit. The complex character was true to form as still to me the best beer in the world. It made the perfect Thanksgiving beer and made me appreciate the good things in the world. Cheers.",
   rating: 5,
-  # img_url: ''
-
 )
+
 review12 = Review.create!(
   user_id: user3.id,
   beer_id: beer3.id,
-  # vintage_id: 2013,
+  vintage_id: vintage44.id,
   review: "Wow - this beer ages better than any other I've tried!  It has really mellowed out nicely",
   rating: 5,
-  # img_url: ''
-
 )
+rev_photo12 = URI.open('https://belgibeer.com/filemanager/userfiles/Orval_Blog/IMG_3939.jpg')
+review12.photo.attach(io: rev_photo12, filename: "rev_photo12")
+
 # review13 = Review.create!(
 #   user_id: ,
 #   beer_id: ,
@@ -492,3 +521,62 @@ review12 = Review.create!(
 
 ### Beer/ Flavor profile joins table
 
+
+### Vintages
+vintage1	 =  Vintage.create!(year: 1970)
+vintage2	 =  Vintage.create!(year: 1971)
+vintage3	 =  Vintage.create!(year: 1972)
+vintage4	 =  Vintage.create!(year: 1973)
+vintage5	 =  Vintage.create!(year: 1974)
+vintage6	 =  Vintage.create!(year: 1975)
+vintage7	 =  Vintage.create!(year: 1976)
+vintage8	 =  Vintage.create!(year: 1977)
+vintage9	 =  Vintage.create!(year: 1978)
+vintage10	 =  Vintage.create!(year: 1979)
+vintage11	 =  Vintage.create!(year: 1980)
+vintage12	 =  Vintage.create!(year: 1981)
+vintage13	 =  Vintage.create!(year: 1982)
+vintage14	 =  Vintage.create!(year: 1983)
+vintage15	 =  Vintage.create!(year: 1984)
+vintage16	 =  Vintage.create!(year: 1985)
+vintage17	 =  Vintage.create!(year: 1986)
+vintage18	 =  Vintage.create!(year: 1987)
+vintage19	 =  Vintage.create!(year: 1988)
+vintage20	 =  Vintage.create!(year: 1989)
+vintage21	 =  Vintage.create!(year: 1990)
+vintage22	 =  Vintage.create!(year: 1991)
+vintage23	 =  Vintage.create!(year: 1992)
+vintage24	 =  Vintage.create!(year: 1993)
+vintage25	 =  Vintage.create!(year: 1994)
+vintage26	 =  Vintage.create!(year: 1995)
+vintage27	 =  Vintage.create!(year: 1996)
+vintage28	 =  Vintage.create!(year: 1997)
+vintage29	 =  Vintage.create!(year: 1998)
+vintage30	 =  Vintage.create!(year: 1999)
+vintage31	 =  Vintage.create!(year: 2000)
+vintage32	 =  Vintage.create!(year: 2001)
+vintage33	 =  Vintage.create!(year: 2002)
+vintage34	 =  Vintage.create!(year: 2003)
+vintage35	 =  Vintage.create!(year: 2004)
+vintage36	 =  Vintage.create!(year: 2005)
+vintage37	 =  Vintage.create!(year: 2006)
+vintage38	 =  Vintage.create!(year: 2007)
+vintage39	 =  Vintage.create!(year: 2008)
+vintage40	 =  Vintage.create!(year: 2009)
+vintage41	 =  Vintage.create!(year: 2010)
+vintage42	 =  Vintage.create!(year: 2011)
+vintage43	 =  Vintage.create!(year: 2012)
+vintage44	 =  Vintage.create!(year: 2013)
+vintage45	 =  Vintage.create!(year: 2014)
+vintage46	 =  Vintage.create!(year: 2015)
+vintage47	 =  Vintage.create!(year: 2016)
+vintage48	 =  Vintage.create!(year: 2017)
+vintage49	 =  Vintage.create!(year: 2018)
+vintage50	 =  Vintage.create!(year: 2019)
+vintage51	 =  Vintage.create!(year: 2020)
+vintage52	 =  Vintage.create!(year: 2021)
+vintage53	 =  Vintage.create!(year: 2022)
+vintage54	 =  Vintage.create!(year: 2023)
+vintage55	 =  Vintage.create!(year: 2024)
+vintage56	 =  Vintage.create!(year: 2025)
+vintage57	 =  Vintage.create!(year: 2026)

@@ -21,8 +21,13 @@
     display: block;
     float: left;
     width: auto;
-    height: 90px;
-    padding: 10px
+    height: 120px;
+    width: 100px;
+    object-fit: cover;
+    overflow: hidden;
+    padding: 10px;
+    padding-right: 25px;
+
 }
 
 .beer-form {
@@ -61,6 +66,16 @@
 
 .create-beer-p {
     display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.create-review-button {
+    display: flex;
+    border: 1px solid goldenrod;
+    border-radius: 3px;
+    padding: 10px;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;

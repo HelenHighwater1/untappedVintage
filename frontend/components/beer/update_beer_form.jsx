@@ -25,8 +25,6 @@ class EditBeer extends React.Component {
 
     handleDelete(e) {
         e.preventDefault()
-        console.log('props1', this.props)
-        console.log('props2', this.props.deleteBeer)
         this.props.deleteBeer(this.props.beer.id)
             .then(() => this.props.history.push('/beers'));
     }

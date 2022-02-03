@@ -10,10 +10,20 @@ class Api::UsersController < ApplicationController
         end
     end    
 
+    def show 
+        @user = User.find_by(id: params[:id])
+
+    end
+
+    def index 
+        @users = User.available
+        render :index
+
+    end
     
     private 
     def user_params
-        params.require(:user).permit(:username, :email, :first_name, :last_name, :country, :password)
+        params.require(:user).permit(:username, :email, :first_name, :last_name, :country, :password, :photo)
     end
 
 

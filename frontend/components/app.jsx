@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
+import CreateReviewFormContainer from './reviews/create_review_container'
 import CreateBeer from './beer/beer_form_container';
 import EditBeer from './beer/update_beer_form_container';
 import ShowBeer from './beer/beer_show_container';
@@ -33,9 +34,10 @@ const App = (props) => (
             <Navbar />
         </header>
         <Switch>
+            <ProtectedRoute exact path = "/create_review" component={CreateReviewFormContainer}/>
             <ProtectedRoute exact path="/create_beer" component={CreateBeer} />
             <ProtectedRoute exact path="/edit_beer/:beerId" component={EditBeer} />
-            <ProtectedRoute exact path="/reviews_index" component={ReviewIndexContainer} />
+            <Route exact path="/reviews_index" component={ReviewIndexContainer} />
             <Route exact path="/beers/:beerId" component={ShowBeer}/>
             <Route exact path="/beers" component={BeerIndexContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />

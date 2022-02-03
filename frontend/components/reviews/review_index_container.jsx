@@ -1,17 +1,19 @@
-
-
 import React from 'react';
+import ReviewIndex from './review_index';
+import { fetchReviews } from '../../actions/review_actions'
+import { fetchBeers } from '../../actions/beer_actions'
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
+
 import ReviewsIndex from './review_index';
 
-// const mSTP = () => ({
+const mSTP = state => ({
+    reviews: Object.values(state.entities.reviews),
+    beers: Object.values(state.entities.beers)
+});
 
-//})
+const mDTP = dispatch => ({
+    fetchReviews: () => dispatch(fetchReviews()),
+    fetchBeers: () => dispatch(fetchBeers())
+});
 
-
-// const mDTP = dispatch => ({
-//     
-// });
-
-export default connect(null)(ReviewsIndex);
+export default connect(mSTP, mDTP)(ReviewsIndex);

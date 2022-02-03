@@ -6,7 +6,6 @@ import EditBeer from './update_beer_form';
 
 
 const mSTP = (state, ownProps) => {
-    console.log('in mSTP', state.entities.beers)
     return {beer: state.entities.beers[ownProps.match.params.beerId]}
     // breweries: state.entities.breweries
 }

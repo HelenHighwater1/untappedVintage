@@ -15,8 +15,7 @@ export const createBeer = beer => (
         method: 'POST',
         url: 'api/beers',
         data: { beer }
-        // contentType: false, 
-        // processData: false
+
 
     })
 );
@@ -30,13 +29,7 @@ export const updateBeer = beer => {
     }))
 };
 
-export const createReview = review => (
-    $.ajax({
-        method: 'POST',
-        url: 'api/reviews',
-        data: { review }
-    })
-);
+
 
 export const deleteBeer = id => (
     $.ajax({

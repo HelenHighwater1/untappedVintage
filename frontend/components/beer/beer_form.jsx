@@ -1,7 +1,7 @@
 import React from 'react';
 import BreweryComboBox from './combo_box';
 // import { Link } from 'react-router-dom';
-import { fetchBreweries } from '../../actions/brewery_actions'
+import { fetchBreweries } from '../../actions/brewery_actions';
 
 class CreateBeer extends React.Component {
     constructor(props) {
@@ -28,19 +28,13 @@ class CreateBeer extends React.Component {
         e.preventDefault()
         let breweryId = this.findBreweryId(this.state.brewery_id)
         this.setState({brewery_id: breweryId})
-        // console.log('this.brewery=', this.state.brewery_id)
-        // this.props.createBeer({
-        //     name: this.state.name,
-        //     brewery_id: breweryId,
-        //     serving_style: this.state.serving_style
-        // })
 
         const formData = new FormData();
         formData.append('beer[name]', this.state.name)
         formData.append('beer[brewery_id]', breweryId)
         formData.append('beer[serving_style]', this.state.serving_style)
         formData.append('beer[photo]', this.state.photoFile)
-debugger
+
         $.ajax({
             url: '/api/beers',
             method: 'POST',
