@@ -4,7 +4,7 @@ UNTAPPDVintage is a site for beer lovers to connect and exchange information abo
 
 Curious about what people have to say? Take a look now at the [live site](https://untappd-vintage.herokuapp.com/#/)!
 
-![log-in](images/log-in.png)
+![log-in](assets/images/log-in.png)
 
 ## Features
 
