@@ -6,6 +6,7 @@ class ReviewIndex extends React.Component {
         super(props)
     }
     componentDidMount() {
+        console.log('in component did mount')
         this.props.fetchBeers();
         this.props.fetchReviews();
         
@@ -13,10 +14,11 @@ class ReviewIndex extends React.Component {
 
     findBeerName(id){
         let arr = this.props.beers
+        console.log(arr)
         let obj = arr.find(beer => {
             return beer.id === id
         })
-        return obj.name
+        return obj?.name
     }
 
     render(){
@@ -25,6 +27,7 @@ class ReviewIndex extends React.Component {
 
 
         if (!reviews || !beers || beers.length === 0 || reviews.length === 0) {
+            console.log('boogie')
             return (
                 <>
                     <div className="buffer"></div>

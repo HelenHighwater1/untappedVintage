@@ -23,6 +23,8 @@ class CreateReviewForm extends React.Component {
         this.props.fetchVintages();
     }
 
+
+
     update(field) {
         return e => this.setState({ [field]: e.target.value })
     }
@@ -53,7 +55,10 @@ class CreateReviewForm extends React.Component {
             processData: false
         })
 
-            .then(() => this.props.history.push('/beers'));
+            .then(() =>{ 
+                this.props.history.push('/reviews_index')
+                
+            });
 
     }
     
