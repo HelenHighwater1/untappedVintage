@@ -4,7 +4,7 @@ UNTAPPDVintage is a site for beer lovers to connect and exchange information abo
 
 Curious about what people have to say? Take a look now at the [live site](https://untappd-vintage.herokuapp.com/#/)!
 
-![log-in](assets/images/log-in.png)
+![log-in](app/assets/images/log-in.png)
 
 ## Features
 
@@ -19,13 +19,11 @@ Logged-in users can:
 -	update or delete beers that they created
 -	create, update, or delete their own reviews
 
+![create_beer](app/assets/images/create_beer.png)
 
 ## Technologies
 
 UNTAPPDVintage has a backend framework of Ruby on Rails, using a PostgreSQL database.  Its frontend is Javascript, react and redux.  SCSS was used for styling, and the image assets are stored and accessed on AWS S3.  
-
-## Coming Soon!!  
-
 
 
 ## Coming Soon!!  
