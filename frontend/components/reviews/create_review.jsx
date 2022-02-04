@@ -38,8 +38,6 @@ class CreateReviewForm extends React.Component {
         e.preventDefault()
         const beer = this.findBeer(this.state.beer)
         const vintage = this.findVintage(parseInt(this.state.vintage))
-        console.log(beer, "inside handle submit")
-        console.log(vintage.id, "ID - inside handle submit")
         const formData = new FormData();
         formData.append('review[beer_id]', beer.id)
         formData.append('review[vintage_id]', vintage.id)
@@ -55,7 +53,7 @@ class CreateReviewForm extends React.Component {
             processData: false
         })
 
-            .then(() => this.props.history.push('/reviews_index'));
+            .then(() => this.props.history.push('/beers'));
 
     }
     
@@ -71,20 +69,14 @@ class CreateReviewForm extends React.Component {
         let arr = this.props.vintages
 
         let obj = arr.find(vin => {
-            console.log('______________-')
-            console.log("vin" , vin)
-            console.log("yr" , yr)
-            console.log("vin.year === yr", vin.year === yr)
             return vin.year === yr
         })
-        console.log(obj)
         return obj
     }
 
 
     render(){
         const beers = this.props.beers
-        console.log(beers)
         let beerList = null
         if (beers.length > 0) {
             beerList = <BeerComboBox beers={beers} onChange={this.update('beer')} onSelect={this.updateSelect('beer')} />

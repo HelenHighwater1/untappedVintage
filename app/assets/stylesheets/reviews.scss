@@ -2,13 +2,21 @@
     display: block;
     width: 600px;
     padding: 10px;
+    background-color: white;
+    border-radius: 16px;
 }
 
 .review-index-item {
+    display: flex;
+    flex-direction: row;
     right: 0;
     padding: 15px;
     height: auto;
     border-bottom: 1px solid goldenrod
+}
+
+.review-index-item li {
+    padding-bottom: 15px;
 }
 
 .review-index-item h3:hover {

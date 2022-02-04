@@ -10,12 +10,47 @@
     flex-direction: column;
     width: 60%;
     padding: 20px;
-    justify-content: left;
+    margin-right: 20px;
+    align-items: flex-end;
+    border-radius: 16px;   
+
 
 }
 
 .split-right{
     display: flex; 
     flex-direction: column;
-    width: 30%;
+    width: 20%;
+    height: auto;
+    // position: fixed;
+    // background-color: white;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 16px;
+}
+
+.split-right ul {
+    
+    background-color: white;
+    border-radius: 16px;
+    justify-content: center;
+}
+.split-right li {
+    
+    margin-top: 20px;
+}
+
+.split-right img {
+    display: block;
+    margin: auto;
+    height: 100px;
+    width: 120px;
+    object-fit: cover;
+    overflow: hidden;
+    padding: 10px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(114, 114, 114);
+    margin-bottom: 5px;
+   
 }
