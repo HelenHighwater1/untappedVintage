@@ -49,8 +49,10 @@ class ReviewIndex extends React.Component {
                                         
                                         <div><Link to={`/beers/${review.beer_id}`}><h3>{this.findBeerName(review.beer_id)}</h3></Link>
                                             <ul>
-                                                <li><span className="bold">Comments:</span> {review.body}</li>
+                                                <li><span className="bold">Vintage:</span> {(review.vintage.id)}</li>
                                                 <li><span className="bold">Rating:</span> {review.rating}</li>
+                                                <li><span className="bold">Comments:</span> {review.body}</li>
+
                                             </ul>
                                         </div>
                                     </li>)
