@@ -25,6 +25,28 @@ Logged-in users can:
 
 UNTAPPDVintage has a backend framework of Ruby on Rails, using a PostgreSQL database.  Its frontend is Javascript, react and redux.  SCSS was used for styling, and the image assets are stored and accessed on AWS S3.  
 
+## Special Features
+
+### Combo box
+I decided to implement a combo box for user input when they are searching beers or breweries.  I chose this instead of a regular dropdown menu because it will be faster easier for the user to find the beer / brewery they are after, especially as the database grows.  The combo box is set to pull all information for the feild in the database, so if a user adds a new beer, they will be able to find it in the combo box right away.  
+
+This is also beneficial for the organization of the database - syntax differences (for instance "St. Bernardus" vs "Saint Bernardus" will result in two versions of the same beer in the database.
+
+
+### Translating user input 
+In order to simplify filtering and data analysis later, I decided to include a lot of joined tables in my schema.  Because of this, I needed to use entity IDs instead of names when creating new beers or reviews.  However, I don't expect a user to type in a Brewery ID when they only know the name.  To fix this, I included some methods to translate user input strings to find the correct ID in the database.  
+
+```javascript 
+    findVintage(yr) {
+        let arr = this.props.vintages
+
+        let obj = arr.find(vin => {
+            return vin.year === yr
+        })
+        return obj
+    }
+```
+
 
 ## Coming Soon!!  
 -  Users can create Breweries with associated beers
