@@ -27,7 +27,7 @@ class ReviewIndex extends React.Component {
 
 
         if (!reviews || !beers || beers.length === 0 || reviews.length === 0) {
-            console.log('boogie')
+
             return (
                 <>
                     <div className="buffer"></div>

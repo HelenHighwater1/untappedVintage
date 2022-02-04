@@ -319,7 +319,7 @@ review1 = Review.create!(
   user_id: user1.id,
   beer_id: beer1.id,
   vintage_id: vintage48.id,
-  review: 'This is the best beer on earth!',
+  body: 'This is the best beer on earth!',
   rating: 5,
 )
 rev_photo1 = URI.open('https://theculturetrip.com/wp-content/uploads/2016/11/-reuben-grayflickr.jpg')
@@ -330,7 +330,7 @@ review2 = Review.create!(
   user_id: user2.id,
   beer_id: beer1.id,
   vintage_id: vintage41.id,
-  review: "It aged too long - it is completely flat and too sweet.  It tastes like a very nutty port",
+  body: "It aged too long - it is completely flat and too sweet.  It tastes like a very nutty port",
   rating: 2,
 )
 
@@ -339,7 +339,7 @@ review3 = Review.create!(
   user_id: user4.id,
   beer_id: beer1.id,
   vintage_id: vintage45.id,
-  review: "Great beer!  Getting pretty flat though, it probably would have been best 2 years ago.  Still interesting to drink, nutty and mellow",
+  body: "Great beer!  Getting pretty flat though, it probably would have been best 2 years ago.  Still interesting to drink, nutty and mellow",
   rating: 4,
 )
 
@@ -347,14 +347,14 @@ review4 = Review.create!(
   user_id: user5.id,
   beer_id: beer1.id,
   vintage_id: vintage50.id,
-  review: "Great taste - still as bubbly as the new ones, maybe a touch mellower with a nice nuttiness",
+  body: "Great taste - still as bubbly as the new ones, maybe a touch mellower with a nice nuttiness",
   rating: 5,
 )
 review5 = Review.create!(
   user_id: user5.id,
   beer_id: beer2.id,
   vintage_id: vintage42.id,
-  review: "Cellar aged for 10 years. Definitely the best cellar aged beer from my collection so far.  Mellowed out well, you can really taste the complexity",
+  body: "Cellar aged for 10 years. Definitely the best cellar aged beer from my collection so far.  Mellowed out well, you can really taste the complexity",
   rating: 5,
 )
 rev_photo5 = URI.open('https://images.squarespace-cdn.com/content/59b02a56ccc5c51518e820d4/1606962742100-PYFRZAO1U05OD7Q04A2V/DSC02933.jpg?content-type=image%2Fjpeg')
@@ -364,7 +364,7 @@ review6 = Review.create!(
   user_id: user7.id,
   beer_id: beer2.id,
   vintage_id: vintage48.id,
-  review: "Caramel, super smooth. Has aged very well.",
+  body: "Caramel, super smooth. Has aged very well.",
   rating: 5,
 )
 
@@ -372,7 +372,7 @@ review7 = Review.create!(
   user_id: user6.id,
   beer_id: beer2.id,
   vintage_id: vintage50.id,
-  review: "Raisins, plums, figs. Like a humbug candy it’s so smooth and sweet. Bread pudding notes in there. ",
+  body: "Raisins, plums, figs. Like a humbug candy it’s so smooth and sweet. Bread pudding notes in there. ",
   rating: 5,
 )
 
@@ -380,7 +380,7 @@ review8 = Review.create!(
   user_id: user2.id,
   beer_id: beer1.id,
   vintage_id: vintage52.id,
-  review: "De reviews zeggen één van de beste biertjes, dus laten we eens proeven! En proeven doe ik! Heerlijk zacht, moutig en zoet van smaak met lichte tonen van karamel, koffie en rozijnen! Heerlijk gebalanceerd, maar toch erg smaakvol! De reviews liegen niet!",
+  body: "De reviews zeggen één van de beste biertjes, dus laten we eens proeven! En proeven doe ik! Heerlijk zacht, moutig en zoet van smaak met lichte tonen van karamel, koffie en rozijnen! Heerlijk gebalanceerd, maar toch erg smaakvol! De reviews liegen niet!",
   rating: 5,
 )
 
@@ -389,7 +389,7 @@ review9 = Review.create!(
   user_id: user7.id,
   beer_id: beer1.id,
   vintage_id: vintage42.id,
-  review: " I would not recommend aging any beer as long as 11 years, the biggest issue is carbonation will begin to fail, the complexity is degraded, the alcohol was less noticeable but the pleasant aspects of the taste are diminished as well, I would not recommend aging, I know you can but, it's not as good, I would drink this beer as soon as possible.",
+  body: " I would not recommend aging any beer as long as 11 years, the biggest issue is carbonation will begin to fail, the complexity is degraded, the alcohol was less noticeable but the pleasant aspects of the taste are diminished as well, I would not recommend aging, I know you can but, it's not as good, I would drink this beer as soon as possible.",
   rating: 4,
 )
 
@@ -397,7 +397,7 @@ review10 = Review.create!(
   user_id: user6.id,
   beer_id: beer1.id,
   vintage_id: vintage49.id,
-  review: "Poured the color of cold brew coffee and sports a manilla color head which leaves copious lacing.
+  body: "Poured the color of cold brew coffee and sports a manilla color head which leaves copious lacing.
 The aroma was stone fruit and malts, I tried to find spices but failed. Still, excellent aroma.
 The taste, wow; while it pretty much followed the aroma, the layers and power of flavors is impressive. Stone fruit mingling with biscuit like malts and they made an excellent pair.
 The feel was very good, way too easy to drink. I expected something more viscous but this really works.
@@ -410,7 +410,7 @@ review11 = Review.create!(
   user_id: user3.id,
   beer_id: beer1.id,
   vintage_id: vintage48.id,
-  review: "This one had rested for about 5 years. It poured a dark plum to prune color with still a good level of carbonation. The aroma was wonderful stone fruit. The complex character was true to form as still to me the best beer in the world. It made the perfect Thanksgiving beer and made me appreciate the good things in the world. Cheers.",
+  body: "This one had rested for about 5 years. It poured a dark plum to prune color with still a good level of carbonation. The aroma was wonderful stone fruit. The complex character was true to form as still to me the best beer in the world. It made the perfect Thanksgiving beer and made me appreciate the good things in the world. Cheers.",
   rating: 5,
 )
 
@@ -418,7 +418,7 @@ review12 = Review.create!(
   user_id: user3.id,
   beer_id: beer3.id,
   vintage_id: vintage44.id,
-  review: "Wow - this beer ages better than any other I've tried!  It has really mellowed out nicely",
+  body: "Wow - this beer ages better than any other I've tried!  It has really mellowed out nicely",
   rating: 5,
 )
 rev_photo12 = URI.open('https://belgibeer.com/filemanager/userfiles/Orval_Blog/IMG_3939.jpg')
