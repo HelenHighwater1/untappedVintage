@@ -33,7 +33,11 @@ class CreateBeer extends React.Component {
         formData.append('beer[name]', this.state.name)
         formData.append('beer[brewery_id]', breweryId)
         formData.append('beer[serving_style]', this.state.serving_style)
-        formData.append('beer[photo]', this.state.photoFile)
+        this.state.photoFile ? 
+            formData.append('beer[photo]', this.state.photoFile) 
+            :
+            formData.append('beer[photo]', )
+    
 
         $.ajax({
             url: '/api/beers',
