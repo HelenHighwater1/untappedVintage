@@ -33,10 +33,8 @@ class CreateBeer extends React.Component {
         formData.append('beer[name]', this.state.name)
         formData.append('beer[brewery_id]', breweryId)
         formData.append('beer[serving_style]', this.state.serving_style)
-        this.state.photoFile ? 
-            formData.append('beer[photo]', this.state.photoFile) 
-            :
-            formData.append('beer[photo]', )
+        formData.append('beer[photo]', this.state.photoFile) 
+  
     
 
         $.ajax({
@@ -69,6 +67,7 @@ class CreateBeer extends React.Component {
 
     render() {
         const breweries = this.props.breweries
+        const errors = this.props.errors.length > 0 ? "show-errors" : 'hidden'
         let breweryComboBox = null
         if (breweries.length > 0) {
             breweryComboBox = <BreweryComboBox breweries={breweries} onChange={this.update('brewery_id')} onSelect={this.updateSelect('brewery_id')} />

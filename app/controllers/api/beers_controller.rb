@@ -35,9 +35,9 @@ class Api::BeersController < ApplicationController
     def update
         @beer = Beer.find_by(id: params[:id])
         if @beer.update(beer_params)
-        render :show
+            render :show
         else
-        render json: @beer.errors.full_messages, status: 422
+            render json: @beer.errors.full_messages, status: 422
         end
     end
 

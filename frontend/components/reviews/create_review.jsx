@@ -11,7 +11,7 @@ class CreateReviewForm extends React.Component {
             vintage: '',
             body: '',
             rating: '',
-            photoFile: null
+            photoFile: undefined
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.findBeer = this.findBeer.bind(this)
@@ -37,6 +37,7 @@ class CreateReviewForm extends React.Component {
     }
 
     handleSubmit(e){
+        console.log(this.state.photoFile)
         e.preventDefault()
         const beer = this.findBeer(this.state.beer)
         const vintage = this.findVintage(parseInt(this.state.vintage))
@@ -45,7 +46,8 @@ class CreateReviewForm extends React.Component {
         formData.append('review[vintage_id]', vintage.id)
         formData.append('review[body]', this.state.body)
         formData.append('review[rating]', this.state.rating)
-        formData.append('review[photo]', this.state.photoFile)
+        if (this.state.photoFile) formData.append('review[photo]', this.state.photoFile)
+
 
         $.ajax({
             url: '/api/reviews',

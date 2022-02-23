@@ -7,5 +7,6 @@ json.array!(@reviews) do |review|
     json.rating review.rating
     if review.photo.attached?
          json.photoUrl url_for(review.photo) 
+    else json.photoUrl image_url('beer_icon.png')
     end
 end

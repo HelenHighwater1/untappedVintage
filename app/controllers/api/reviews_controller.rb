@@ -13,7 +13,10 @@ class Api::ReviewsController < ApplicationController
     end
     
     def create
+        puts review_params
         @review = Review.new(review_params)
+        puts @review
+
         @review.user = current_user
         if @review.save
             render :show 
