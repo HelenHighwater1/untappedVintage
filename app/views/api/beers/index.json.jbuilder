@@ -10,5 +10,7 @@ json.array!(@beers) do |beer|
     json.brewery beer.brewery
     if beer.photo.attached?
          json.photoUrl url_for(beer.photo) 
+    else 
+        json.photoUrl image_url('beer_icon.png')
     end
 end

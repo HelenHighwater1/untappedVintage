@@ -11,7 +11,7 @@ class CreateReviewForm extends React.Component {
             vintage: '',
             body: '',
             rating: '',
-            photoFile: undefined
+            photoFile: null
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.findBeer = this.findBeer.bind(this)

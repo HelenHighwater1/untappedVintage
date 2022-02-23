@@ -25,12 +25,15 @@ class EditBeer extends React.Component {
 
     handleDelete(e) {
         e.preventDefault()
+        
         this.props.deleteBeer(this.props.beer.id)
-            .then(() => this.props.history.push('/beers'));
+            .then(() => {
+                console.log('in handle delete')
+                this.props.history.push('/beers')});
     }
 
     render() {
-       
+        if (!this.props.beer) return <div>"loading" </div>
         return (
             <div>
                 <div className="buffer"></div>
@@ -40,7 +43,7 @@ class EditBeer extends React.Component {
                     <label>Name</label>
                     <input
                         type="text"
-                        value={this.state.name}
+                        value={this.state.name || ""}
                         onChange={this.update('name')}
                     />
 
