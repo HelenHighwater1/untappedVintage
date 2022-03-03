@@ -1,3 +1,78 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-profile-content {
+    width: 100%;
+    display: flex; 
+    flex-direction: row;
+}
+
+
+//////////// USER INFO
+
+.profile-user-info {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    text-align: center;
+}
+
+.profile-icons {
+    display: flex; 
+    flex-direction: row;
+}
+
+.profile-about-user {
+    padding: 10px;
+
+}
+
+/////// REVIEWS
+
+.profile-reviews-info {
+    width: 45%;
+    display: flex; 
+    flex-direction: column;
+}
+
+
+.profile-reviews-header {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile-reviews-list {
+    padding: 10px
+}
+
+/////// FRIENDS
+
+
+.profile-friends-info {
+    width: 30%;
+    display: flex; 
+    flex-direction: column;
+}
+
+.profile-friends-header {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile-friends-dropdown-button {
+    background-color: rgb(238, 157, 51);
+    border-radius: 5px;
+
+}
+
+.profile-friends-dropdown-button:hover {
+    background-color: rgb(202, 90, 46);
+    color: white;  
+}
+
+
+.profile-friends-list {
+    padding: 10px;
+}

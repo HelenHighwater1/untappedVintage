@@ -19,7 +19,10 @@ class CreateBeer extends React.Component {
     update(field) {
         return e => this.setState({ [field]: e.target.value })
     }
-
+    
+    componentWillUnmount() {
+        this.props.receiveBeerErrors([])
+    }
     updateSelect(field) {
         return input => this.setState({ [field]: input })
     }
@@ -66,7 +69,12 @@ class CreateBeer extends React.Component {
 
     render() {
         const breweries = this.props.breweries
-        const errors = this.props.errors.length > 0 ? "show-errors" : 'hidden'
+        const errors = this.props.errors.map( error => {
+            return (
+                <li key={error}>{error}</li>
+            )
+        })
+        const displayErrors = errors.length > 0 ? "show-errors" : 'hidden'
         // MAKE ERRORS POP UP
         let breweryComboBox = null
         if (breweries.length > 0) {
@@ -79,6 +87,9 @@ class CreateBeer extends React.Component {
                 
                 <form className='beer-form' onSubmit={this.handleSubmit}> 
                     <h1 padding="10px">Create A New Beer</h1>
+                        <ul className={displayErrors}>
+                            {errors}
+                        </ul>
                     <label>Beer Name</label>
                     <input
                         type="text"

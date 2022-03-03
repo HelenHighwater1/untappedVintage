@@ -28,7 +28,7 @@ class EditBeer extends React.Component {
         
         this.props.deleteBeer(this.props.beer.id)
             .then(() => {
-                console.log('in handle delete')
+                
                 this.props.history.push('/beers')});
     }
 
@@ -43,7 +43,7 @@ class EditBeer extends React.Component {
                     <label>Name</label>
                     <input
                         type="text"
-                        value={this.state.name || ""}
+                        value={this.state.name}
                         onChange={this.update('name')}
                     />
 
