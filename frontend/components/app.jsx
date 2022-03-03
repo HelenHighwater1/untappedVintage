@@ -10,7 +10,7 @@ import {
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
-import UserProfileContainer from './user_profile/user_profile_container';
+// import UserProfileContainer from './user_profile/user_profile_container';
 import CreateReviewFormContainer from './reviews/create_review_container'
 import CreateBeer from './beer/beer_form_container';
 import EditBeer from './beer/update_beer_form_container';
@@ -36,7 +36,7 @@ const App = (props) => (
             <Navbar />
         </header>
         <Switch>
-            <ProtectedRoute exact path = "/profile" component={UserProfileContainer}/>
+            {/* <ProtectedRoute exact path = "/profile" component={UserProfileContainer}/> */}
             <ProtectedRoute exact path = "/create_review" component={CreateReviewFormContainer}/>
             <ProtectedRoute exact path="/create_beer" component={CreateBeer} />
             <ProtectedRoute exact path="/edit_beer/:beerId" component={EditBeer} />

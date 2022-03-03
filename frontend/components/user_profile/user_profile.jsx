@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-class BeerShow extends React.Component {
+class UserProfile extends React.Component {
     constructor(props) {
         super(props)
         
@@ -64,3 +64,6 @@ class BeerShow extends React.Component {
         )
     }
 }
+
+
+export default UserProfile
