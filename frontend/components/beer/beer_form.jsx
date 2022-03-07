@@ -8,12 +8,13 @@ class CreateBeer extends React.Component {
         super(props)
         this.state = {
             name: '',
-            brewery_id: '',
+            brewery: '',
             serving_style: '',
             photoFile: null
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.findBreweryId = this.findBreweryId.bind(this)
+        
     }
 
     update(field) {
@@ -22,6 +23,7 @@ class CreateBeer extends React.Component {
     
     componentWillUnmount() {
         this.props.receiveBeerErrors([])
+        this.props.fetchBreweries()
     }
     updateSelect(field) {
         return input => this.setState({ [field]: input })
@@ -29,7 +31,7 @@ class CreateBeer extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        let breweryId = this.findBreweryId(this.state.brewery_id)
+        let breweryId = this.findBreweryId(this.state.brewery)
         this.setState({brewery_id: breweryId})
 
         const formData = new FormData();
@@ -52,11 +54,15 @@ class CreateBeer extends React.Component {
     }
 
     findBreweryId(brewery) {
-        let arr = this.props.breweries
-        let obj = arr.find(breweryObject => {
-           return breweryObject.name === `${brewery}`
-        })
-        return obj.id
+        if (this.props.breweries) {
+            let arr = this.props.breweries
+            let obj = arr.find(breweryObject => {
+                return breweryObject.name === `${brewery}`
+            })
+            console.log(obj)
+            return obj.id
+        }
+
     }
 
     componentDidMount() {
@@ -67,14 +73,32 @@ class CreateBeer extends React.Component {
         this.setState({photoFile: e.currentTarget.files[0]})
     }
 
+    renderErrors(){
+        if(!this.state.errors) return '';
+        return (
+            <div>
+                {this.state.errors.map((error, idx) => {
+                return (<div key={idx}> {error} </div>)
+                    })}
+            </div>
+        )
+    }
+
+
+//     if (!this.state.errors.length) return '';
+//     return (
+//       <div className='card-form-errors'>
+//         {this.state.errors.map((error,idx) => {
+//           return (<div key={idx}> {error} </div>)
+//         })}
+//       </div>)
+//   }
     render() {
         const breweries = this.props.breweries
-        const errors = this.props.errors.map( error => {
-            return (
-                <li key={error}>{error}</li>
-            )
-        })
-        const displayErrors = errors.length > 0 ? "show-errors" : 'hidden'
+        // const errors = this.props.errors.map((error, idx) => {
+        //     return (<div key={idx}> {error} </div>)
+        // })
+        const displayErrors = this.props.errors.length > 0 ? "show-errors" : 'hidden'
         // MAKE ERRORS POP UP
         let breweryComboBox = null
         if (breweries.length > 0) {
@@ -88,7 +112,7 @@ class CreateBeer extends React.Component {
                 <form className='beer-form' onSubmit={this.handleSubmit}> 
                     <h1 padding="10px">Create A New Beer</h1>
                         <ul className={displayErrors}>
-                            {errors}
+                            {this.renderErrors()}
                         </ul>
                     <label>Beer Name</label>
                     <input
