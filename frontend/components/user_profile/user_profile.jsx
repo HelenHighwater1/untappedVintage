@@ -24,19 +24,20 @@ class UserProfile extends React.Component {
 
 
     render () {
-
+        const user = this.props.user
         // if (this.state.reviews)
-        if (!this.props.user ) return <div>"loading"</div>
+        if (!user ) return <div>"loading"</div>
+        console.log(user)
         return (
             <div>
                 <div className='buffer' />
                 <div className = "user-profile-content">
                     <div className="profile-user-info">
                         <div className ="profile-name">
-                            Hi, {this.props.user.username}!
+                            Hi, {user.username}!
                         </div>
                         <div className ="profile-icons">
-                             <img className='beer-thumbnail' src={this.props.user.photoUrl} alt={this.props.user.username} />
+                             <img className='thumbnail' src={user.photoUrl} alt={user.username} />
                              <div>badge placeholder</div> 
                         </div>
                         <div className ="profile-about-user">

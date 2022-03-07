@@ -2,6 +2,7 @@
     width: 100%;
     display: flex; 
     flex-direction: row;
+    border: 1px solid orange;
 }
 
 
@@ -11,6 +12,9 @@
     width: 35%;
     display: flex;
     flex-direction: column;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.22);
+    margin: 3px;
+    border: 1px solid green;
 }
 
 .profile-name {
@@ -33,6 +37,8 @@
     width: 45%;
     display: flex; 
     flex-direction: column;
+    margin: 3px;
+    border: 1px solid blue;
 }
 
 
@@ -40,6 +46,7 @@
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
+
 }
 
 .profile-reviews-list {
@@ -53,6 +60,8 @@
     width: 30%;
     display: flex; 
     flex-direction: column;
+    margin: 3px;
+    border: 1px solid red;
 }
 
 .profile-friends-header {
