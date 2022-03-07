@@ -9,8 +9,9 @@ class UserProfile extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchReviews(this.props.match.params.beerId)
-            
+        console.log(this.props)
+        this.props.fetchUser(this.props.user.id)
+        
     }
 
     renderFriendsMenu() {
@@ -25,8 +26,10 @@ class UserProfile extends React.Component {
     render () {
 
         // if (this.state.reviews)
+        if (!this.props.user ) return <div>"loading"</div>
         return (
             <div>
+                <div className='buffer' />
                 <div className = "user-profile-content">
                     <div className="profile-user-info">
                         <div className ="profile-name">

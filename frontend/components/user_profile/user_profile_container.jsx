@@ -1,17 +1,21 @@
-// import { connect } from 'react-redux';
-// import UserProfile from './user_profile';
-// import { fetchUser } from '../../actions/user_actions';
+import { connect } from 'react-redux';
+import UserProfile from './user_profile';
+import { fetchUser } from '../../actions/user_actions';
 
 
-// const mSTP = (state, ownProps ) => {
-//     return {
-//         user: state.entities.users[ownProps.match.params.userId]
-//     }
+const mSTP = (state, ownProps ) => {
     
-// };
+    // let id = state.session.id
 
-// const mDTP = dispatch => ({
-//     fetchUser: (userId) => dispatch(fetchUser(userId))
-// });
+    return {
+        user: state.entities.users[state.session.id]
 
-// export default connect(mSTP, mDTP)(UserProfile);
+    }
+    
+};
+
+const mDTP = dispatch => ({
+    fetchUser: (userId) => dispatch(fetchUser(userId))
+});
+
+export default connect(mSTP, mDTP)(UserProfile);
