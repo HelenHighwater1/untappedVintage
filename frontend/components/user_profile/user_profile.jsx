@@ -41,7 +41,7 @@ class UserProfile extends React.Component {
                              <div>badge placeholder</div> 
                         </div>
                         <div className ="profile-about-user">
-
+                            <p>Country: {user.country}</p>
                         </div>
                     </div>
                     <div className="profile-reviews-info">

@@ -23,7 +23,6 @@ class CreateBeer extends React.Component {
     
     componentWillUnmount() {
         this.props.receiveBeerErrors([])
-        this.props.fetchBreweries()
     }
     updateSelect(field) {
         return input => this.setState({ [field]: input })
@@ -54,6 +53,7 @@ class CreateBeer extends React.Component {
     }
 
     findBreweryId(brewery) {
+        console.log(this.props.breweries)
         if (this.props.breweries) {
             let arr = this.props.breweries
             let obj = arr.find(breweryObject => {
