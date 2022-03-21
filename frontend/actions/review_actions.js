@@ -35,6 +35,12 @@ export const fetchReviews = () => dispatch => (
         return dispatch(receiveReviews(reviews))
     })
 );
+
+// export const fetchUserReviews = (id) => dispatch => (
+//     APIUtil.fetchUserReviews(id).then(reviews => {
+//         return dispatch(receiveReviews(reviews))
+//     })
+// );
 export const fetchVintages = () => dispatch => (
     APIUtil.fetchVintages().then(vintages => {  
         return dispatch(receiveVintages(vintages))

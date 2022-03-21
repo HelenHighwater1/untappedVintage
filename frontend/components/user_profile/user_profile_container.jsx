@@ -4,15 +4,17 @@ import { fetchUser } from '../../actions/user_actions';
 
 
 const mSTP = (state ) => {
+     console.log(state)
     return {
-        user: state.entities.users[state.session.id]
-        
+        user: state.entities.users[state.session.id],
+        reviews: state.entities.reviews[state.session.id]
     }
     
 };
 
 const mDTP = dispatch => ({
-    fetchUser: (userId) => dispatch(fetchUser(userId))
+    fetchUser: (userId) => dispatch(fetchUser(userId)), 
+    // fetchUserReviews: (userId) => dispatch(fetchUserReviews(userId))
 });
 
 export default connect(mSTP, mDTP)(UserProfile);

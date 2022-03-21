@@ -11,7 +11,7 @@ class UserProfile extends React.Component {
     componentDidMount() {
         console.log(this.props)
         this.props.fetchUser(this.props.user.id)
-        
+        // this.props.fetchUserReviews(this.props.user.id)
     }
 
     renderFriendsMenu() {
@@ -19,7 +19,7 @@ class UserProfile extends React.Component {
     }
 
     renderBadge() {
-        // if (this.props.user.reviews.length <)
+        // if (!this.props.user.reviews.length <)
     }
 
 
