@@ -36,7 +36,7 @@ const App = (props) => (
             <Navbar />
         </header>
         <Switch>
-            <ProtectedRoute exact path = "/profile" component={UserProfileContainer}/>
+            {/* <ProtectedRoute exact path = "/profile" component={UserProfileContainer}/> */}
             <ProtectedRoute exact path = "/create_review" component={CreateReviewFormContainer}/>
             <ProtectedRoute exact path="/create_beer" component={CreateBeer} />
             <ProtectedRoute exact path="/edit_beer/:beerId" component={EditBeer} />
