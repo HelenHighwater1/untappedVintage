@@ -102,7 +102,7 @@ class CreateBeer extends React.Component {
         // MAKE ERRORS POP UP
         let breweryComboBox = null
         if (breweries.length > 0) {
-            breweryComboBox = <BreweryComboBox breweries={breweries} onChange={this.update('brewery_id')} onSelect={this.updateSelect('brewery_id')} />
+            breweryComboBox = <BreweryComboBox breweries={breweries} onChange={this.update('brewery')} onSelect={this.updateSelect('brewery')} />
         }
     
         return (
