@@ -1,9 +1,10 @@
 class User < ApplicationRecord
 
-    validates :username, :email, :first_name, :last_name, :password_digest, :session_token, presence: true
+    validates :username, :first_name, :last_name, :password_digest, :session_token, presence: true
     validates :username, :email, :session_token, uniqueness: true
     after_initialize :ensure_session_token
     attr_reader :password
+    validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } 
 
     has_one_attached :photo
     has_many :reviews, dependent: :destroy
