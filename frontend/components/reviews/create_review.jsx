@@ -116,11 +116,11 @@ class CreateReviewForm extends React.Component {
                     <label>Rating</label>
                     <div>
                         <div className="rate">
-                            <input type="radio"  value="5" onChange={() => this.state.rating='5'}/>
-                            <input type="radio" value="4" onChange={() => this.state.rating = '4'}/>
-                            <input type="radio" value="3" onChange={() => this.state.rating = '3'}/>
+                            <input type="radio"  value="1" onChange={() => this.state.rating='1'}/>
                             <input type="radio" value="2" onChange={() => this.state.rating = '2'}/>
-                            <input type="radio" value="1" onChange={() => this.state.rating = '1'}/>
+                            <input type="radio" value="3" onChange={() => this.state.rating = '3'}/>
+                            <input type="radio" value="4" onChange={() => this.state.rating = '4'}/>
+                            <input type="radio" value="5" onChange={() => this.state.rating = '5'}/>
                         </div>
                     </div>
                     <br />

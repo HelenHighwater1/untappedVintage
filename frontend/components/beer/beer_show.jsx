@@ -9,7 +9,10 @@ class BeerShow extends React.Component {
     }
 
     componentDidMount() {
+        console.log(this.props)
         this.props.fetchBeer(this.props.match.params.beerId);
+        // this.props.fetchReviews()
+        console.log(this.props.user)
     }
 
 
@@ -39,8 +42,11 @@ class BeerShow extends React.Component {
                     <div className="create-review-button">Drinking this beer now?<Link to="/create_review" id="text-link"> Check-in and add a Review!</Link></div>
                 </div>
                 
-
+                
             </div>
+            <div>Reviews
+
+                </div>
             </>
         )
     }
