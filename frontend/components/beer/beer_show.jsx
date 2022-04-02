@@ -12,7 +12,8 @@ class BeerShow extends React.Component {
         console.log(this.props)
         this.props.fetchBeer(this.props.match.params.beerId);
         // this.props.fetchReviews()
-        console.log(this.props.user)
+
+
     }
 
 
@@ -27,9 +28,10 @@ class BeerShow extends React.Component {
                 
             )
         }
-       
+       console.log(this.props.currentUser.id, beer.id)
+        const updateBeer = this.props.currentUser.id === this.props.beer.user_id ? 'Update' : ''
     
-        return (
+        return (    
             <>
             <div className='buffer'></div>
             <div className = "beer-show">
@@ -38,12 +40,17 @@ class BeerShow extends React.Component {
                     <h3>{beer.name}</h3>
                     <p>{beer.brewery.name}</p>
                     <p>{beer.serving_style}</p>
-                    <Link to={`/edit_beer/${beer.id}`}>Update Beer</Link>
-                    <div className="create-review-button">Drinking this beer now?<Link to="/create_review" id="text-link"> Check-in and add a Review!</Link></div>
+
+                    <p>Average Rating: </p>
+                    
+                    <p><Link to={`/edit_beer/${beer.id}`}>{updateBeer}</Link></p>  
+                    
                 </div>
                 
-                
-            </div>
+           
+            </div> 
+            <div className="create-review-button">Drinking this beer now?<Link to="/create_review" id="text-link"> Check-in and add a Review!</Link></div>
+    
             <div>Reviews
 
                 </div>
