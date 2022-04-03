@@ -31,7 +31,7 @@ import Oops from './oops';
 
 
 const App = (props) => (
-    <div> 
+    <div className='display-flex'> 
         <header>
             <Navbar />
         </header>
@@ -48,9 +48,9 @@ const App = (props) => (
             <Route exact path="/" component={HeroContainer} />
             <Route component={Oops} />
         </Switch>
-        <footer>
-            <Footer />
-        </footer>
+        {/* <footer> */}
+        <Footer />
+        {/* </footer> */}
     </div>
 );
 

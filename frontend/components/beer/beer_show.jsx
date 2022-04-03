@@ -5,16 +5,41 @@ class BeerShow extends React.Component {
     constructor(props) {
         super(props)
         
-        
+        this.renderReviews = this.renderReviews.bind(this)
     }
 
     componentDidMount() {
       
         this.props.fetchBeer(this.props.match.params.beerId);
-        // this.props.fetchReviews()
+        this.props.fetchBeerReviews(this.props.match.params.beerId)
+            
 
 
     }
+
+    renderReviews() {
+
+        const reviews = this.props.beerReviews
+        console.log(reviews)
+      
+        if (reviews.length === 0) {
+            return <div>No reviews yet!</div>
+        }
+
+        return (
+            <div>
+                {reviews.map( review => 
+                    <div>
+                        <li>{review.id}</li>
+                        <li>{review.id}</li>
+                    </div>
+                )}
+        
+            </div>
+        )
+
+    }
+
 
 
     render() {
@@ -28,9 +53,9 @@ class BeerShow extends React.Component {
                 
             )
         }
-       
+        
         const updateBeer = this.props.currentUser.id === beer.user_id ? 'Update' : ''
-    
+        console.log('beerReviews =', this.props.beerReviews)
         return (    
             <>
             <div className='buffer'></div>
@@ -51,9 +76,9 @@ class BeerShow extends React.Component {
             </div> 
             <div className="create-review-button">Drinking this beer now?<Link to="/create_review" id="text-link"> Check-in and add a Review!</Link></div>
     
-            <div>Reviews
-
-                </div>
+            <div className="beer-review-list">Reviews
+                {this.renderReviews()}
+            </div>
             </>
         )
     }

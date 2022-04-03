@@ -36,6 +36,12 @@ export const fetchReviews = () => dispatch => (
     })
 );
 
+export const fetchBeerReviews = (id) => dispatch => (
+    APIUtil.fetchBeerReviews(id).then(reviews => {
+        return dispatch(receiveReviews(reviews))
+    })
+);
+
 // export const fetchUserReviews = (id) => dispatch => (
 //     APIUtil.fetchUserReviews(id).then(reviews => {
 //         return dispatch(receiveReviews(reviews))

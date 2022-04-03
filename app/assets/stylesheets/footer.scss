@@ -1,3 +1,17 @@
+.display-flex  {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer {
+    margin-top: auto;
+    // display: flex; 
+    // flex-direction: column;
+    // align-content: flex-end;
+    // margin-top: -60px;
+}
+
 .footer-links {
     display: flex;
     flex-direction: row;

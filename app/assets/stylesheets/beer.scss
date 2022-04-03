@@ -90,3 +90,14 @@
     padding-right: 5px;
     
 }
+
+.beer-review-list {
+    display: flex;
+    flex-direction: row; 
+    width: 800px;
+    padding: 10px;
+    border: 1px solid goldenrod;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}

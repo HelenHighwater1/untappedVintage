@@ -3,11 +3,12 @@ export const fetchReviews = () => (
         url: 'api/reviews',
     })
 );
-// export const fetchUserReviews = (id) => (
-//     $.ajax({
-//         url: 'api/reviews',
-//     })
-// );
+export const fetchBeerReviews = (beerId) => (
+    $.ajax({
+        url: 'api/reviews',
+        data: { beerId }
+    })
+);
 
 export const fetchVintages = () => (
     $.ajax({

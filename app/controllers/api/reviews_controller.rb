@@ -26,7 +26,12 @@ class Api::ReviewsController < ApplicationController
     end
 
     def index 
-        @reviews = Review.all
+        if !params[:beerId]
+            @reviews = Review.all
+        else
+            @reviews = Review.where(beer_id: params[:beerId])
+        end
+
         if @reviews
             render :index
         else

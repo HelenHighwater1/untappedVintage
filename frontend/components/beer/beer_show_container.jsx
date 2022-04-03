@@ -3,13 +3,15 @@ import BeerShow from './beer_show';
 import { fetchBeer } from '../../actions/beer_actions';
 import { fetchUser } from '../../actions/user_actions';
 import { selectBeer } from '../../reducers/selectors';
-
+import { fetchBeerReviews } from '../../actions/review_actions'
 
 const mSTP = (state, ownProps ) => {
-
+    console.log('in container', Object.values(state.entities.reviews) )
     return {
         beer: state.entities.beers[ownProps.match.params.beerId],
-        currentUser: state.entities.users[state.session.id]
+        currentUser: state.entities.users[state.session.id], 
+        beerReviews: Object.values(state.entities.reviews)
+        // .filter((review) => review.beerId === ownProps.match.params.beerId)
     }
     
 };
@@ -17,6 +19,7 @@ const mSTP = (state, ownProps ) => {
 const mDTP = dispatch => ({
     fetchBeer: (beerId) => dispatch(fetchBeer(beerId)),
     fetchUser: (userId) => dispatch(fetchUser(userId)),
+    fetchBeerReviews: (beerId) => dispatch(fetchBeerReviews(beerId))
 });
 
 export default connect(mSTP, mDTP)(BeerShow);
