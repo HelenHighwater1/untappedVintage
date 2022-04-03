@@ -28,8 +28,8 @@ class BeerShow extends React.Component {
                 
             )
         }
-       console.log(this.props.currentUser.id, beer.id)
-        const updateBeer = this.props.currentUser.id === this.props.beer.user_id ? 'Update' : ''
+       console.log(this.props.currentUser.id, beer.user_id)
+        const updateBeer = this.props.currentUser.id === beer.user_id ? 'Update' : ''
     
         return (    
             <>
