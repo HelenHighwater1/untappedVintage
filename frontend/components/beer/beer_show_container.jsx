@@ -6,7 +6,7 @@ import { selectBeer } from '../../reducers/selectors';
 
 
 const mSTP = (state, ownProps ) => {
-    console.log('state', state)
+
     return {
         beer: state.entities.beers[ownProps.match.params.beerId],
         currentUser: state.entities.users[state.session.id]

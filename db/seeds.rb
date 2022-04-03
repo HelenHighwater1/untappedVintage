@@ -169,7 +169,8 @@ brewery13 = Brewery.create!(
 beer1 = Beer.create!(
   name: "Westvleteren 12",
   serving_style: "Serve in a challice or stemmed tulip glass, between 46°F- 57°F",
-  brewery_id: brewery1.id
+  brewery_id: brewery1.id,
+  user_id: user2.id
 )
 photo_1 = URI.open('https://preview.redd.it/ss9ndwsdfne31.jpg?width=960&crop=smart&auto=webp&s=dcb6ffc722a25e11afb67273ad015082d1713708')
 beer1.photo.attach(io: photo_1, filename: "westvleteren")
@@ -178,7 +179,8 @@ beer1.photo.attach(io: photo_1, filename: "westvleteren")
 beer2 = Beer.create!(
   name: "St Bernardus 12",
   serving_style:  "Serve in a challice or stemmed tulip glass, between 46°F- 57°F",
-  brewery_id: brewery2.id
+  brewery_id: brewery2.id,
+  user_id: user2.id
 )
 photo_2 = URI.open('https://www.beercartel.com.au/product_images/uploaded_images/tumblr-8635f763216d2dd0314440da1a0673bc-b3b02f39-500.jpg')
 beer2.photo.attach(io: photo_2, filename: "St Bernardus 12")
@@ -187,7 +189,8 @@ beer2.photo.attach(io: photo_2, filename: "St Bernardus 12")
 beer3 = Beer.create!(
   name: "Orval",
   serving_style: "Serve in a challice or stemmed tulip glass, between 46°F- 57°F",
-  brewery_id: brewery3.id
+  brewery_id: brewery3.id,
+  user_id: user2.id
 )
 photo_3 = URI.open('https://brewpublic.com/wp-content/uploads/2018/03/image-of-Orval-courtesy-of-Merchand-du-Vin.jpg')
 beer3.photo.attach(io: photo_3, filename: "orval")
@@ -196,7 +199,8 @@ beer3.photo.attach(io: photo_3, filename: "orval")
 beer4 = Beer.create!(
   name: "Parabola",
   serving_style: "Serve in a snifter or tulip glass, between 46°F- 57°F",
-  brewery_id: brewery4.id
+  brewery_id: brewery4.id,
+  user_id: user2.id
 )
 photo_4 = URI.open('https://ryansbooze.com/wp-content/uploads/2018/10/IMG_1085.jpg')
 beer4.photo.attach(io: photo_4, filename: "parabola")
@@ -205,7 +209,8 @@ beer4.photo.attach(io: photo_4, filename: "parabola")
 beer5 = Beer.create!(
   name: "Bourbon County Stout",
   serving_style: "Serve between 45°F- 55°F",
-  brewery_id: brewery5.id
+  brewery_id: brewery5.id,
+  user_id: user2.id
 )
 photo_5 = URI.open('https://cdn.shopify.com/s/files/1/0567/1262/6329/products/goose-island-bourbon-county-stout-2015-16-9oz-2506.jpg?v=1627037253')
 beer5.photo.attach(io: photo_5, filename: "bourboncounty")
@@ -214,7 +219,8 @@ beer5.photo.attach(io: photo_5, filename: "bourboncounty")
 beer6 = Beer.create!(
   name: "KBS",
   serving_style: "Serve in a snifter or tulip glass, between 46°F- 57°F",
-  brewery_id: brewery6.id
+  brewery_id: brewery6.id,
+  user_id: user2.id
 )
 photo_6 = URI.open('https://www.mlive.com/resizer/B5JWgEsGgz0fjOb04N899XabNIE=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/grpress/news_impact/photo/kbsjpg-354d581d041123d1.jpg')
 beer6.photo.attach(io: photo_6, filename: "KBS")
@@ -223,7 +229,8 @@ beer6.photo.attach(io: photo_6, filename: "KBS")
 beer7 = Beer.create!(
   name: "Old Stock Ale",
   serving_style: "Serve in a pint glass between  50°F- 60°F",
-  brewery_id: brewery7.id
+  brewery_id: brewery7.id, 
+  user_id: user2.id
 )
 photo_7 = URI.open('http://brewdrinkrun.com/wp-content/uploads/2015/04/1609581_10153118945547752_3303324530700025261_n-720x460.jpg')
 beer7.photo.attach(io: photo_7, filename: "oldStockAle")
@@ -232,7 +239,8 @@ beer7.photo.attach(io: photo_7, filename: "oldStockAle")
 beer8 = Beer.create!(
   name: "Stone IRS",
   serving_style: "Serve in a stemmed tulip glass, ideally at 55°F",
-  brewery_id: brewery8.id
+  brewery_id: brewery8.id, 
+  user_id: user2.id
 )
 photo_8 = URI.open('https://fiftytwobottles.files.wordpress.com/2011/08/irs.jpg')
 beer8.photo.attach(io: photo_8, filename: "StoneIrs")
@@ -241,7 +249,8 @@ beer8.photo.attach(io: photo_8, filename: "StoneIrs")
 beer9 = Beer.create!(
   name: "Thomas Hardy's Ale",
   serving_style: "To be enjoyed at 13°C / 55°F, after allowing oxygenation in a large balloon glass. Savour quietly after dinner, in front of a crackling fire.",
-  brewery_id: brewery9.id
+  brewery_id: brewery9.id, 
+  user_id: user2.id
 )
 photo_9 = URI.open('https://www.andoverclassicwines.com/images/sites/andoverclassicwines/labels/thomas-hardy-s-ale-golden-edition_1.jpg')
 beer9.photo.attach(io: photo_9, filename: "ThomasHardy")
@@ -250,7 +259,8 @@ beer9.photo.attach(io: photo_9, filename: "ThomasHardy")
 beer10 = Beer.create!(
   name: "Rochefort 10",
   serving_style: "Serve in a challice or stemmed tulip glass, between 46°F- 57°F",
-  brewery_id: brewery10.id
+  brewery_id: brewery10.id, 
+  user_id: user2.id
 )
 photo_10 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2B7-JLQQKlpP5BNSRvxewslOrXGLlXHjfwg&usqp=CAU')
 beer10.photo.attach(io: photo_10, filename: "Rochefort10")
@@ -259,7 +269,8 @@ beer10.photo.attach(io: photo_10, filename: "Rochefort10")
 beer11 = Beer.create!(
   name: "Girardin Gueuze",
   serving_style: "Pour very slowly into a stemmed tulip, snifter, or collins glass, at a temperature between  45°F- 55°F",
-  brewery_id: brewery11.id
+  brewery_id: brewery11.id, 
+  user_id: user2.id
 )
 photo_11 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1lZrBcydQ7UTNWGAShxHI_8-6PSKAqb2qfg&usqp=CAU')
 beer11.photo.attach(io: photo_11, filename: "GG")
@@ -268,7 +279,8 @@ beer11.photo.attach(io: photo_11, filename: "GG")
 beer12 = Beer.create!(
   name: "Burton Baton",
   serving_style: "Serve in an IPA glass or a snifter, the ideal serving temp is 55°",
-  brewery_id: brewery13.id
+  brewery_id: brewery13.id, 
+  user_id: user2.id
 )
 photo_12 = URI.open('https://tenemu.com/wp-content/uploads/2015/10/Dogfish-Head-Burton-Baton-Imperial-IPA.jpg')
 beer12.photo.attach(io: photo_12, filename: "BB")
@@ -277,7 +289,8 @@ beer12.photo.attach(io: photo_12, filename: "BB")
 beer13 = Beer.create!(
   name: "Bigfoot",
   serving_style: "Serve in stemed tulip glass, the ideal serving temp is between 50°F- 55°",
-  brewery_id: brewery13.id
+  brewery_id: brewery13.id, 
+  user_id: user2.id
 )
 photo_13 = URI.open('https://wtop.com/wp-content/uploads/2021/02/botw.jpg')
 beer13.photo.attach(io: photo_13, filename: "bigfoot")

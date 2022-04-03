@@ -9,7 +9,7 @@ class BeerShow extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props)
+      
         this.props.fetchBeer(this.props.match.params.beerId);
         // this.props.fetchReviews()
 
@@ -28,7 +28,7 @@ class BeerShow extends React.Component {
                 
             )
         }
-       console.log(this.props.currentUser.id, beer.user_id)
+       
         const updateBeer = this.props.currentUser.id === beer.user_id ? 'Update' : ''
     
         return (    
