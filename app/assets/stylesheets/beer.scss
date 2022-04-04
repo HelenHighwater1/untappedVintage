@@ -91,13 +91,43 @@
     
 }
 
-.beer-review-list {
+.beer-review {
     display: flex;
-    flex-direction: row; 
+    flex-direction: column; 
     width: 800px;
     padding: 10px;
     border: 1px solid goldenrod;
     border-radius: 8px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.beer-reviews-header {
+    display: flex;
+    justify-content: center; 
+}
+
+.beer-review-list {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    
+}
+
+.beer-review-li {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    width: 800px;
+
+}
+
+.beer-review-li-user {
+    width: 140px;
+
+}
+
+.beer-review-li-body {
+    width: 500px;
+
 }

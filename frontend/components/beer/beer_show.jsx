@@ -28,10 +28,12 @@ class BeerShow extends React.Component {
 
         return (
             <div>
-                {reviews.map( review => 
+                {reviews.map(review => 
                     <div>
-                        <li>{review.id}</li>
-                        <li>{review.id}</li>
+                        <li className='beer-review-li'>
+                            <p className='beer-review-li-user'>User {review.user_id} says:</p>
+                            <p className='beer-review-li-body'>{review.body}</p>
+                             {review.rating} Stars!</li>
                     </div>
                 )}
         
@@ -75,9 +77,14 @@ class BeerShow extends React.Component {
            
             </div> 
             <div className="create-review-button">Drinking this beer now?<Link to="/create_review" id="text-link"> Check-in and add a Review!</Link></div>
-    
-            <div className="beer-review-list">Reviews
-                {this.renderReviews()}
+             
+            <div className="beer-review">
+                <h1 className="beer-reviews-header">Reviews</h1>
+                <br />
+                <div className = "beer-review-list">
+                      {this.renderReviews()}
+                </div>
+              
             </div>
             </>
         )
