@@ -6,21 +6,19 @@ class BeerShow extends React.Component {
         super(props)
         
         this.renderReviews = this.renderReviews.bind(this)
+        this.fetchAverageRating = this.fetchAverageRating.bind(this)
     }
 
     componentDidMount() {
-      
         this.props.fetchBeer(this.props.match.params.beerId);
         this.props.fetchBeerReviews(this.props.match.params.beerId)
             
-
-
     }
 
     renderReviews() {
 
         const reviews = this.props.beerReviews
-        console.log(reviews)
+
       
         if (reviews.length === 0) {
             return <div>No reviews yet!</div>
@@ -39,6 +37,10 @@ class BeerShow extends React.Component {
         
             </div>
         )
+
+    }
+
+    fetchAverageRating(){
 
     }
 
@@ -68,7 +70,7 @@ class BeerShow extends React.Component {
                     <p>{beer.brewery.name}</p>
                     <p>{beer.serving_style}</p>
 
-                    <p>Average Rating: </p>
+                    <p>Average Rating: {this.fetchAverageRating()} </p>
                     
                     <p><Link to={`/edit_beer/${beer.id}`}>{updateBeer}</Link></p>  
                     

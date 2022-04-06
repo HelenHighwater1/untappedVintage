@@ -4,12 +4,21 @@ import { Link } from 'react-router-dom';
 class ReviewIndex extends React.Component {
     constructor(props) {
         super(props)
+
+        this.deleteUsersReview = this.deleteUsersReview.bind(this)
     }
     componentDidMount() {
         console.log('in component did mount')
         this.props.fetchBeers();
         this.props.fetchReviews();
         
+    }
+
+    deleteUsersReview(id){
+        this.props.deleteReview(id)
+            .then(() =>{ 
+                
+            });
     }
 
     findBeerName(id){
@@ -21,10 +30,11 @@ class ReviewIndex extends React.Component {
         return obj?.name
     }
 
+
     render(){
         const reviews = this.props.reviews
         const beers = this.props.beers
-
+        
 
         if (!reviews || !beers || beers.length === 0 || reviews.length === 0) {
 
@@ -49,13 +59,14 @@ class ReviewIndex extends React.Component {
                                         
                                         <div><Link to={`/beers/${review.beer_id}`}><h3>{this.findBeerName(review.beer_id)}</h3></Link>
                                             <ul>
-                                                {/* <li><span className="bold">Vintage:</span> {review.vintage.id}</li> */}
+                                              
                                                 <li><span className="bold">Rating:</span> {review.rating}</li>
                                                 <li><span className="bold">Comments:</span> {review.body}</li>
-
-                                            </ul>
+                                                { this.props.currentUser.id === review.user_id ? <span onClick={() => this.deleteUsersReview(review.id)}> delete </span>  : ''    }
+ 
+                                            </ul>   
                                         </div>
-                                    </li>)
+                                    </li>);
                                 })
                             }
                         </ul>
