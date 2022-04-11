@@ -32,7 +32,8 @@ class ReviewIndex extends React.Component {
 
 
     render(){
-        const reviews = this.props.reviews
+        const reviews = this.props.reviews.sort((a, b)=> { (a.created_at > b.created_at) ? 1 : -1 })
+        console.log('reviews', reviews)
         const beers = this.props.beers
         
 
@@ -48,7 +49,7 @@ class ReviewIndex extends React.Component {
         return (
             <div > 
                 <div className='buffer'></div>
-                <h1 className="header">Review Index</h1>
+                <h1 className="header">Newest Reviews</h1>
                 <div className= 'split-page'>
                     <div className = 'split-main'>
                         <ul className='review-index'>
