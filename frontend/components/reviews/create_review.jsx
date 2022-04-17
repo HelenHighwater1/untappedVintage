@@ -7,7 +7,7 @@ class CreateReviewForm extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            beer: '',
+            beer: this.props.beer ? beer.name : '',
             vintage: '',
             body: '',
             rating: '',
