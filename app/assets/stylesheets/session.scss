@@ -64,13 +64,14 @@
 #text-link {
 	text-decoration: none;
 	color:rgb(141, 115, 36);
+	// padding: inherit;
 	font-weight: bolder;
 }
 
 #text-link:hover {
 	background-color:rgb(218, 190, 35);
 	color: black;
-	padding: 5px;
+	// padding: 5px;
 	border-radius: 5px;
 }
 // .session-form button

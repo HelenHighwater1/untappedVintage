@@ -11,7 +11,7 @@ import ComboBox from 'react-responsive-combo-box'
 // }
 
 // export const BeerComboBox = beers => {
-//     // console.log(beers)
+//    
 //     const options = beers.map(beer => beer.name)
 //     return (
 //         <ComboBox options={options} onChange={this.props.onChange} onSelect={this.props.onSelect} enableAutocomplete />

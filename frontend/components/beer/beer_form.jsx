@@ -53,13 +53,13 @@ class CreateBeer extends React.Component {
     }
 
     findBreweryId(brewery) {
-        console.log(this.props.breweries)
+        
         if (this.props.breweries) {
             let arr = this.props.breweries
             let obj = arr.find(breweryObject => {
                 return breweryObject.name === `${brewery}`
             })
-            console.log(obj)
+            
             return obj.id
         }
 

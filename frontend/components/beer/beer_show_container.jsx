@@ -6,12 +6,12 @@ import { selectBeer } from '../../reducers/selectors';
 import { fetchBeerReviews } from '../../actions/review_actions'
 
 const mSTP = (state, ownProps ) => {
-    console.log('in container', Object.values(state.entities.reviews) )
+    // console.log('in container', Object.values(state.entities.reviews) )
     return {
         beer: state.entities.beers[ownProps.match.params.beerId],
         currentUser: state.entities.users[state.session.id], 
         beerReviews: Object.values(state.entities.reviews)
-        // .filter((review) => review.beerId === ownProps.match.params.beerId)
+            // .filter((review) => review.beerId === ownProps.match.params.beerId)
     }
     
 };

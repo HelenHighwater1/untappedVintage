@@ -8,7 +8,7 @@ class ReviewIndex extends React.Component {
         this.deleteUsersReview = this.deleteUsersReview.bind(this)
     }
     componentDidMount() {
-        console.log('in component did mount')
+        
         this.props.fetchBeers();
         this.props.fetchReviews();
         
@@ -17,7 +17,7 @@ class ReviewIndex extends React.Component {
     deleteUsersReview(id){
         this.props.deleteReview(id)
             .then(() =>{ 
-                
+                this.props.fetchReviews()
             });
     }
 
@@ -30,10 +30,14 @@ class ReviewIndex extends React.Component {
         return obj?.name
     }
 
+    getAverageRating(id){
+        
+    }
 
     render(){
-        const reviews = this.props.reviews.sort((a, b)=> { (a.created_at > b.created_at) ? 1 : -1 })
-        console.log('reviews', reviews)
+        const reviews = this.props.reviews.slice()
+        reviews.sort((a, b)=> { (a.created_at > b.created_at) ? 1 : -1 })
+        
         const beers = this.props.beers
         
 
@@ -60,10 +64,10 @@ class ReviewIndex extends React.Component {
                                         
                                         <div><Link to={`/beers/${review.beer_id}`}><h3>{this.findBeerName(review.beer_id)}</h3></Link>
                                             <ul>
-                                              
+                                                <li><span className="bold">Reviewed:</span>{new Date(review.created_at).toDateString()}</li>
                                                 <li><span className="bold">Rating:</span> {review.rating}</li>
                                                 <li><span className="bold">Comments:</span> {review.body}</li>
-                                                { this.props.currentUser.id === review.user_id ? <span onClick={() => this.deleteUsersReview(review.id)}> delete </span>  : ''    }
+                                                { this.props.currentUser.id === review.user_id ? <span className = "delete-button" onClick={() => this.deleteUsersReview(review.id)}> delete </span>  : ''    }
  
                                             </ul>   
                                         </div>

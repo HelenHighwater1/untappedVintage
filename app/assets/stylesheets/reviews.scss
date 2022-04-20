@@ -73,3 +73,16 @@
 .rating input:checked ~ label:before {
     content: '\2605'
 }
+
+
+.delete-button{
+    color: grey;
+    padding: 3px;
+    
+}
+.delete-button:hover{
+    color: rgb(112, 18, 18);
+    border-radius: 3px;
+    background-color: rgb(203, 195, 195);
+    cursor: pointer;
+}

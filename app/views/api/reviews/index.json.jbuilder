@@ -5,6 +5,7 @@ json.array!(@reviews) do |review|
     json.vintage_id review.vintage_id
     json.body review.body
     json.rating review.rating
+    json.created_at review.created_at
     if review.photo.attached?
          json.photoUrl url_for(review.photo) 
     else json.photoUrl image_url('beer_icon.png')

@@ -9,7 +9,7 @@ class UserProfile extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props)
+       
         this.props.fetchUser(this.props.user.id)
         // this.props.fetchUserReviews(this.props.user.id)
     }
