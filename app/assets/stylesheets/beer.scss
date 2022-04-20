@@ -117,27 +117,43 @@
     justify-content: center; 
 }
 
-.beer-review-list {
-    display: flex;
-    flex-direction: column;
-    width: 800px;
+// .beer-review-list {
+//     display: flex;
+//     flex-direction: column;
+//     width: 800px;
     
+// }
+
+// .beer-review-li {
+//     display: flex; 
+//     flex-direction: row;
+//     justify-content: space-between;
+//     width: 800px;
+
+// }
+
+// .beer-review-li-user {
+//     width: 140px;
+
+// }
+
+// .beer-review-li-body {
+//     width: 500px;
+
+// }
+.beer-reviews-table-headers{
+    border-bottom: 1px solid grey;
+    font-weight: bold;
 }
 
-.beer-review-li {
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-between;
-    width: 800px;
-
+.beer-reviews-table-small-col{
+    padding: 10px;
+    border-left: 1px solid rgb(185, 182, 182);
+    width: 10%;
 }
-
-.beer-review-li-user {
-    width: 140px;
-
-}
-
-.beer-review-li-body {
-    width: 500px;
-
+.beer-reviews-table-wide-col{
+    padding: 10px;
+    border-left: 1px solid rgb(185, 182, 182);
+    padding-right: 20px;
+    width: 60%;
 }

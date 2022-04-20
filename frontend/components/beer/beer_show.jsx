@@ -12,7 +12,7 @@ class BeerShow extends React.Component {
     componentDidMount() {
         this.props.fetchBeer(this.props.match.params.beerId);
         this.props.fetchBeerReviews(this.props.match.params.beerId)
-            
+        this.props.fetchUsers()
     }
 
     renderReviews() {
@@ -26,14 +26,43 @@ class BeerShow extends React.Component {
 
         return (
             <div>
+                <table >
+                    <tbody>
+                    <tr className = 'beer-reviews-table-headers'>   
+                        <th className = 'beer-reviews-table-small-col'>
+                            User
+                        </th>
+                        <th className = 'beer-reviews-table-small-col'>
+                            Vintage
+                        </th>
+                        <th className = 'beer-reviews-table-wide-col'>
+                            Review
+                        </th>
+                        <th className = 'beer-reviews-table-small-col'> 
+                            Rating
+                        </th>
+                    </tr>
+               
+                    
                 {reviews.map(review => 
-                    <div>
-                        <li className='beer-review-li'>
-                            <p className='beer-review-li-user'>User {review.user_id} says:</p>
-                            <p className='beer-review-li-body'>{review.body}</p>
-                             {review.rating} Stars!</li>
-                    </div>
+                    
+                    <tr>
+                        <td className = 'beer-reviews-table-small-col'>
+                            User {users.findBy()} says: 
+                        </td>
+                        <td className = 'beer-reviews-table-small-col'>
+                            {review.vintage}  
+                        </td>
+                        <td className ='beer-reviews-table-wide-col'>
+                            {review.body}
+                        </td>
+                        <td className = 'beer-reviews-table-small-col'>
+                            {review.rating} Stars!
+                        </td>
+                    </tr> 
                 )}
+                </tbody>
+                </table>
         
             </div>
         )
@@ -84,7 +113,7 @@ class BeerShow extends React.Component {
                 
            
             </div> 
-            <div className="create-review-button">Drinking this beer now?<Link to="/create_review" id="text-link"> Check-in and add a Review!</Link></div>
+            <div className="create-review-button">Drinking this beer now?<Link to="/create_review" id="text-link" > Check-in and add a Review!</Link></div>
              
             <div className="beer-review">
                 <h1 className="beer-reviews-header">Reviews</h1>
