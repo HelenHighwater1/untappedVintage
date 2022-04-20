@@ -41,7 +41,13 @@ class BeerShow extends React.Component {
     }
 
     fetchAverageRating(){
-
+        let sum = 0
+        let length = 0
+        this.props.beerReviews.forEach(review => {
+            sum += review.rating
+            length += 1
+        })
+        return sum/length
     }
 
 
