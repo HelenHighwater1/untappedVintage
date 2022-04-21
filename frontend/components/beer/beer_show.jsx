@@ -18,7 +18,7 @@ class BeerShow extends React.Component {
     renderReviews() {
 
         const reviews = this.props.beerReviews
-
+        console.log('users.values', this.props.users)
       
         if (reviews.length === 0) {
             return <div>No reviews yet!</div>
@@ -48,7 +48,7 @@ class BeerShow extends React.Component {
                     
                     <tr>
                         <td className = 'beer-reviews-table-small-col'>
-                            User {users.findBy()} says: 
+                            {/* User {this.props.users.values.find(user => (user.id === review.user_id))} says:  */}
                         </td>
                         <td className = 'beer-reviews-table-small-col'>
                             {review.vintage}  

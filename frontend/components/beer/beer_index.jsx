@@ -27,11 +27,12 @@ class BeerIndex extends React.Component {
              <>
                 <div className="buffer"></div>
                 <div>
+                    <h1 className="header">Beer Index</h1>
                     <div className='split-page'>
                         <div className='split-main'>
-                            
+                        
                         <ul className = "beer-index">
-                                <h1 className="header">Beer Index</h1>
+                            <h1 className='centered'>Highest Rated</h1>
                             {
                                 beers.map(beer => {
                                     return (<li className = "beer-index-item" key={beer.id}>
@@ -49,8 +50,8 @@ class BeerIndex extends React.Component {
                         </div>
                         <div className='split-right'> 
                            <ul className='split-right-ul'> 
-                           <h2> "The Older the Better"  </h2>
-                           <p >Top 5 Beers that age best long-term</p>
+                           <h2 className='centered'> "The Older the Better"  </h2>
+                           <p className='centered'>Top 5 Beers that age best long-term</p>
                                 <li><span className='bold'>Thomas Hardy's Ale</span> best aged 12-25 years <br/>
                                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8dRYxcEOhJv7ZF2U4GB9QENcGStHbAhJlKw&usqp=CAU'/>
                                </li>      

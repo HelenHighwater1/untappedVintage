@@ -11,7 +11,7 @@ const mSTP = (state, ownProps ) => {
     return {
         beer: state.entities.beers[ownProps.match.params.beerId],
         currentUser: state.entities.users[state.session.id], 
-        users: state.entities.users;
+        users: state.entities.users,
         beerReviews: Object.values(state.entities.reviews)
             // .filter((review) => review.beerId === ownProps.match.params.beerId)
     }

@@ -59,6 +59,7 @@
 
 .beer-show {
     display: flex;
+    background-color: whitesmoke;
     flex-direction: row; 
     width: 800px;
     padding: 10px;
@@ -102,6 +103,8 @@
 
 .beer-review {
     display: flex;
+    background-color: whitesmoke;
+    
     flex-direction: column; 
     width: 800px;
     padding: 10px;
@@ -113,6 +116,7 @@
 }
 
 .beer-reviews-header {
+    font-family: 'Bungee Shade', cursive;
     display: flex;
     justify-content: center; 
 }
@@ -148,12 +152,12 @@
 
 .beer-reviews-table-small-col{
     padding: 10px;
-    border-left: 1px solid rgb(185, 182, 182);
+    border-left: 1px solid rgb(225, 222, 222);
     width: 10%;
 }
 .beer-reviews-table-wide-col{
     padding: 10px;
-    border-left: 1px solid rgb(185, 182, 182);
+    border-left: 1px solid rgb(225, 222, 222);
     padding-right: 20px;
     width: 60%;
 }
