@@ -101,7 +101,7 @@ class BeerShow extends React.Component {
             <div className = "beer-show">
                 <img className='beer-thumbnail' src={beer.photoUrl} alt={beer.name} />
                 <div className = "beer-show-info">
-                    <h3>{beer.name}</h3>
+                    <h1 className='beer-reviews-header'>{beer.name}</h1>
                     <p>{beer.brewery.name}</p>
                     <p>{beer.serving_style}</p>
 

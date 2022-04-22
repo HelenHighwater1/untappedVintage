@@ -30,9 +30,12 @@
     width: 100px;
     object-fit: cover;
     overflow: hidden;
-    padding: 10px;
-    padding-right: 25px;
-
+    margin: 10px;
+    margin-right: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
 }
 
 .beer-form {
