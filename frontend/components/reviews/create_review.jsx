@@ -59,7 +59,6 @@ class CreateReviewForm extends React.Component {
 
             .then(() =>{ 
                 this.props.history.push('/reviews_index')
-                
             });
 
     }

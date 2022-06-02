@@ -15,6 +15,14 @@ class BeerShow extends React.Component {
         this.props.fetchUsers()
     }
 
+    fetchUsername(user) {
+
+    }
+
+    fetchVintage(vintageId){
+        return vintage.year
+    }
+
     renderReviews() {
 
         const reviews = this.props.beerReviews
@@ -48,7 +56,7 @@ class BeerShow extends React.Component {
                     
                     <tr>
                         <td className = 'beer-reviews-table-small-col'>
-                            {/* User {this.props.users.values.find(user => (user.id === review.user_id))} says:  */}
+                            {/* User {this.props.users.values.findBy(user => (user.id === review.user_id))} says:  */}
                         </td>
                         <td className = 'beer-reviews-table-small-col'>
                             {review.vintage}  

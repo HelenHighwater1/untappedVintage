@@ -42,11 +42,12 @@ export const fetchBeerReviews = (id) => dispatch => (
     })
 );
 
-// export const fetchUserReviews = (id) => dispatch => (
-//     APIUtil.fetchUserReviews(id).then(reviews => {
-//         return dispatch(receiveReviews(reviews))
-//     })
-// );
+export const fetchUserReviews = (id) => dispatch => {
+    return (
+    APIUtil.fetchUserReviews(id).then(reviews => {
+        return dispatch(receiveReviews(reviews))
+    }))
+};
 export const fetchVintages = () => dispatch => (
     APIUtil.fetchVintages().then(vintages => {  
         return dispatch(receiveVintages(vintages))

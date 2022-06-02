@@ -9,6 +9,16 @@ export const fetchBeerReviews = (beerId) => (
         data: { beerId }
     })
 );
+export const fetchUserReviews = (userId) => {
+    console.log('in api')
+    return (
+         $.ajax({
+        url: 'api/reviews',
+        data: { user_id : userId }
+    })
+    )
+   
+};
 
 export const fetchVintages = () => (
     $.ajax({
