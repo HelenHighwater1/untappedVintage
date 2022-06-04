@@ -57,9 +57,10 @@ class BeerShow extends React.Component {
                     <tr>
                         <td className = 'beer-reviews-table-small-col'>
                             {/* User {this.props.users.values.findBy(user => (user.id === review.user_id))} says:  */}
+                            {review.user_name}
                         </td>
                         <td className = 'beer-reviews-table-small-col'>
-                            {review.vintage}  
+                            {review.vintage_year}  
                         </td>
                         <td className ='beer-reviews-table-wide-col'>
                             {review.body}
