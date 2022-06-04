@@ -24,11 +24,16 @@ class UserProfile extends React.Component {
 
 
     render () {
+        console.log('inside user profile')
         const user = this.props.user
         const reviews = this.props.reviews
+        console.log('USER PROFILE RENDER', reviews)
         // if (this.state.reviews)
-        if (!user || !reviews ) return <div>"loading"</div>
-        console.log(user)
+        if (!user || !reviews ){ 
+            console.log('user: ', user)
+            console.log('review: ', reviews)
+            return <div>"loading"</div>
+        }
         return (
             <div>
                 <div className='buffer' />
@@ -50,13 +55,15 @@ class UserProfile extends React.Component {
                             Your Reviews
                         </div>
                         <div className= 'profile-reviews-list'>
-                            {user.reviews.map((review) => {
-                               <li>
-                                   {review.beer_id}
-                                   {review.vintage_id}
+                            {reviews.map((review) => {
+                                return (
+                                <li>
+                                   Review: 
+                                   {review.beer_name}
+                                   {review.vintage_year}
                                    {review.body}
                                    {review.rating}
-                               </li> 
+                               </li> )
                             })}
                         </div>
                     </div>

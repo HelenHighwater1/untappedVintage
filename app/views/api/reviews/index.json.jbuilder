@@ -3,6 +3,7 @@ json.array!(@reviews) do |review|
     json.user_id review.user_id
     json.user_name review.user.username 
     json.beer_id review.beer_id
+    json.beer_name review.beer.name
     json.vintage_id review.vintage_id
     json.vintage_year review.vintage&.year
     json.body review.body

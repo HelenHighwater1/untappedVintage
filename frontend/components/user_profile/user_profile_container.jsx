@@ -5,10 +5,15 @@ import { fetchUserReviews } from '../../actions/review_actions';
 
 
 const mSTP = (state ) => {
+    console.log('inMSTP, StateL', state)
+    const values =  Object.values(state.entities.reviews)
+    const userReviews = values?.filter((review)=> {
 
+        return review.user_id === state.session.id})
     return {
         user: state.entities.users[state.session.id],
-        reviews: state.entities.reviews[state.session.id]
+        reviews: userReviews
+       
     }
     
 };

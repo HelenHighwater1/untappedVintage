@@ -15,11 +15,11 @@ class Api::UsersController < ApplicationController
 
     end
 
-    def index 
-        @users = User.available
-        render :index
+    # def index 
+    #     @users = User.available
+    #     render :index
 
-    end
+    # end
     
     private 
     def user_params
