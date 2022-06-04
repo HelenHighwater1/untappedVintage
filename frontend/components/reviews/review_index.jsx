@@ -35,8 +35,9 @@ class ReviewIndex extends React.Component {
     }
 
     render(){
-        const reviews = this.props.reviews.slice()
-        reviews.sort((a, b)=> { (a.created_at > b.created_at) ? 1 : -1 })
+        let reviews = this.props.reviews.slice()
+        // reviews.sort((a, b)=> { (a.created_at > b.created_at) ? 1 : -1 })
+        reviews.sort((a, b)=> { return (a.created_at < b.created_at) ? 1 : -1 })
         
         const beers = this.props.beers
         
