@@ -36,7 +36,7 @@ class Navbar extends React.Component {
                     }}>
                     <img className="profile-thumbnail" src="assets/profile_default"></img>
                     <div className="dropdown-display" style = { this.state.display }>
-                        <Link className="dropdown-item" to="/profile">Profile</Link>
+                        {/* <Link className="dropdown-item" to="/profile">Profile</Link> */}
                         <Link className="dropdown-item" to="/beers">The Pub</Link>
                         <Link className="dropdown-item" to="/reviews_index">Reviews</Link>
                         <span className="dropdown-item" onClick={this.logoutUser}>Log Out</span>
