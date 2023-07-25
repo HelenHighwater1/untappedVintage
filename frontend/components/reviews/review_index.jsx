@@ -36,7 +36,7 @@ class ReviewIndex extends React.Component {
 
     render(){
         let reviews = this.props.reviews.slice()
-        // reviews.sort((a, b)=> { (a.created_at > b.created_at) ? 1 : -1 })
+      
         reviews.sort((a, b)=> { return (a.created_at < b.created_at) ? 1 : -1 })
         
         const beers = this.props.beers
@@ -55,6 +55,8 @@ class ReviewIndex extends React.Component {
             <div > 
                 <div className='buffer'></div>
                 <h1 className="header">Newest Reviews</h1>
+                
+                <Link to="/create_review" id="text-link" className='add-review-button'>Add Review</Link>
                 <div className= 'split-page'>
                     <div className = 'split-main'>
                         <ul className='review-index'>

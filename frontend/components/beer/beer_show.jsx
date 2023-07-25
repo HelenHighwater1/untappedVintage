@@ -15,9 +15,6 @@ class BeerShow extends React.Component {
         this.props.fetchUsers()
     }
 
-    fetchUsername(user) {
-
-    }
 
     fetchVintage(vintageId){
         return vintage.year

@@ -33,6 +33,7 @@ class Api::ReviewsController < ApplicationController
         else
             @reviews = Review.all
         end
+        @reviews = @reviews.includes(:vintage)
 
         if @reviews
             render :index

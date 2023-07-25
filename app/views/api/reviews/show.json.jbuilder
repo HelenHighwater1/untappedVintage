@@ -4,3 +4,13 @@ if @review.photo.attached?
 else 
     json.photoUrl image_url('beer_icon.png')
 end
+
+json.vintage_year review.vintage&.year
+
+# {
+#     id: 123,
+#     user_id: 456,
+#     beer_id: 789,
+#     photoUrl: "whatever.jpg",
+#     vintage_year: 2016
+# }
